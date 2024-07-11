@@ -1,3 +1,4 @@
+// first-carousel interaction
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector(".first-carousel");
   const slider = document.querySelector(".slider");
@@ -60,24 +61,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+// Ebooks interaction
+document.addEventListener("click", function (e) {
+  const target = e.target;
+
+  if (!target.classList.contains("option")) return;
+
+  if (target.classList.contains("active")) return;
+
   const options = document.querySelectorAll(".option");
 
-  let clickedEbook = false;
-
-  const removeLastActive = (e) => {
-    console.log("e is ", e);
-    console.log("boolean e classlist", e.classList.contains("active"));
-    console.log("boolean e clickedEbook", clickedEbook);
-
-    if (!e.classList.contains("active") && clickedEbook) {
-      options.forEach((ev) => {
-        ev.classList.remove("active");
-      });
-    }
-  };
-
-  options.forEach((e) => {
-    e.addEventListener("click", removeLastActive(e));
+  options.forEach((ev) => {
+    ev.classList.remove("active");
   });
+
+  target.classList.add("active");
 });
