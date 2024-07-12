@@ -73,6 +73,14 @@ body {
     }
   }
 
+  .navbar-nav div a {
+    padding: 0px 10px;
+    color: #334155;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
   .navbar-nav div:hover {
     cursor: pointer;
     color: #bcb3fb;
