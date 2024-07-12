@@ -1,6 +1,7 @@
 // first-carousel interaction
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector(".first-carousel");
+  if (carousel === null) return;
   const slider = document.querySelector(".slider");
   const arrowButtons = document.querySelectorAll(".first-carousel-buttons");
 
