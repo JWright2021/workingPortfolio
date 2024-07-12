@@ -168,17 +168,14 @@ body {
 
 h1,
 h2 {
-  border-bottom: 3px solid #bcb3fb;
   color: #1e293b;
   display: table;
   font-family: "BarlowSemiCondensed", sans-serif;
-  font-size: 38px;
   font-weight: 600;
-  line-height: 1.4em;
+  line-height: normal;
   /* TODO: make this not reliant on !important */
   margin: 10px auto !important;
   word-wrap: break-word;
-
   a {
     color: #ff7bac;
     text-decoration: none;
@@ -188,9 +185,41 @@ h2 {
   }
 }
 
+h1 {
+  border-bottom: 3px solid #bcb3fb;
+  font-size: 38px;
+  @media (max-width: 320px) {
+    font-size: 22px;
+  }
+}
+
+h2 {
+  border-bottom: 2px solid #bcb3fb;
+  font-size: 32px;
+  @media (max-width: 320px) {
+    font-size: 18px;
+  }
+}
+
+a {
+  text-decoration: none;
+  /* line-height: 1.2em; */
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 23px;
+  cursor: pointer;
+
+  @media (max-width: 320px) {
+    font-size: 16px;
+  }
+}
+
 p {
   margin: 1em 0;
   font-size: 20px;
+  @media (max-width: 320px) {
+    font-size: 14px;
+  }
 }
 
 .origami-buttons {
