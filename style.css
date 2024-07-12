@@ -66,6 +66,11 @@ body {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
+
+    a {
+      color: #334155;
+      text-decoration: none;
+    }
   }
 
   .navbar-nav div:hover {
