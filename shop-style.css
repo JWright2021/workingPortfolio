@@ -1,0 +1,239 @@
+.origami-book {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  color: #1e293b;
+  text-decoration: none;
+  img {
+    width: 300px;
+    height: auto;
+  }
+
+  h3 {
+    line-height: 1.2em;
+    font-weight: 600;
+    font-size: 32px;
+  }
+
+  a {
+    line-height: 1.2em;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  .book-description {
+    padding-left: 40px;
+  }
+
+  .origami-book-buttons {
+    padding-top: 20px;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.ebooks-fancy-expand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.25s;
+
+  .options {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+
+    min-width: 600px;
+    max-width: 900px;
+    width: calc(100% - 100px);
+
+    height: 400px;
+
+    /* @for $i from 1 through 4 {
+      @media screen and (max-width: 798px - $i*80) {
+        min-width: 600px - $i * 80;
+        .option:nth-child(#{6-$i}) {
+          display: none;
+        }
+      }
+    } */
+
+    .option {
+      border: 3px solid #ff7bac;
+      position: relative;
+      overflow: hidden;
+
+      min-width: 60px;
+      margin: 10px;
+
+      background: var(--optionBackground, var(--defaultBackground, #e6e9ed));
+      background-size: auto 120%;
+      background-position: center;
+
+      cursor: pointer;
+
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+
+      /* @for $i from 1 through length($optionDefaultColours) {
+        &:nth-child(#{$i}) {
+          --defaultBackground: #{nth($optionDefaultColours, $i)};
+        }
+      } */
+
+      &.active {
+        flex-grow: 10000;
+        transform: scale(1);
+
+        max-width: 600px;
+        margin: 0px;
+        border-radius: 40px;
+
+        background-size: auto 100%;
+        .shadow {
+          box-shadow: inset 0 -120px 120px -120px black,
+            inset 0 -120px 120px -100px black;
+        }
+        .label {
+          bottom: 20px;
+          left: 20px;
+          .info > div {
+            left: 0px;
+            opacity: 1;
+          }
+        }
+        /*&:active {
+               transform:scale(0.9);
+            }*/
+      }
+      &:not(.active) {
+        flex-grow: 1;
+
+        border-radius: 30px;
+        .shadow {
+          bottom: -40px;
+          box-shadow: inset 0 -120px 0px -120px black,
+            inset 0 -120px 0px -100px black;
+        }
+        .label {
+          bottom: 10px;
+          left: 10px;
+          .info > div {
+            left: 20px;
+            opacity: 0;
+          }
+        }
+      }
+      .shadow {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+
+        height: 120px;
+
+        transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+      }
+      .label {
+        display: flex;
+        position: absolute;
+        right: 0px;
+
+        height: 40px;
+        transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+        .icon {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          min-width: 40px;
+          max-width: 40px;
+          height: 40px;
+          border-radius: 100%;
+
+          background-color: white;
+          color: var(--defaultBackground);
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          margin-left: 10px;
+
+          color: white;
+
+          white-space: pre;
+          > div {
+            position: relative;
+
+            transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95),
+              opacity 0.5s ease-out;
+          }
+          .main {
+            font-weight: bold;
+            font-size: 1.2rem;
+          }
+          .sub {
+            transition-delay: 0.1s;
+          }
+        }
+      }
+    }
+
+    .option:hover {
+      border-color: #bcb3fb;
+    }
+  }
+}
+
+.diagrams-container {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  margin: auto;
+  column-gap: 20px;
+
+  .diagram {
+    border-radius: 5px;
+    border: 2px solid #ff7bac;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    margin: 0 5px 5px 0;
+    max-width: 225px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.25s ease-in-out;
+    width: 100%;
+
+    img {
+      height: auto;
+      max-width: 225px;
+      filter: opacity(40%);
+      border-radius: 5px;
+      transition: all 0.25s ease-in-out;
+    }
+
+    a {
+      text-align: center;
+      color: #1e293b;
+      text-decoration: none;
+      line-height: 1.2em;
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+
+  .diagram:hover {
+    border-color: #bcb3fb;
+    img {
+      filter: opacity(100%);
+    }
+  }
+}

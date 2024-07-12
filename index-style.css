@@ -1,0 +1,221 @@
+.first-carousel {
+  position: relative;
+
+  .first-carousel-buttons {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #ff7bac;
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    padding: 6px;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+  }
+
+  .first-carousel-buttons:hover {
+    cursor: pointer;
+    border-color: #bcb3fb;
+    svg {
+      fill: #bcb3fb;
+    }
+  }
+
+  .first-carousel-buttons#left {
+    left: 20px;
+    z-index: 1;
+  }
+
+  .first-carousel-buttons#right {
+    right: 60px;
+  }
+}
+
+.first-carousel .slider {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 2));
+  margin: auto;
+  overflow-x: auto;
+  overflow: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: 0;
+
+  @media (max-width: 922px) {
+    grid-auto-columns: 100%;
+    overflow: clip;
+    overflow-x: clip;
+  }
+
+  @media (min-width: 923px) {
+    grid-auto-columns: 50%;
+    max-width: 768px;
+  }
+
+  .dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+
+  .draggin .card {
+    cursor: grab;
+    user-select: none;
+  }
+
+  .slide {
+    scroll-snap-align: start;
+    height: auto;
+    max-width: 350px;
+    background-color: #eeeeee;
+    color: #1e293b;
+
+    a {
+      text-decoration: none;
+      line-height: 1.2em;
+      font-weight: 600;
+      color: #1e293b;
+      font-size: 23px;
+      cursor: pointer;
+    }
+
+    img {
+      width: auto;
+      max-height: 350px;
+    }
+  }
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.popular-container {
+  position: relative;
+}
+
+@keyframes sliding-back-and-forth {
+  from {
+    transform: translateX(-140%);
+  }
+  to {
+    transform: translateX(-65%);
+  }
+}
+
+.second-carousel {
+  animation: sliding-back-and-forth 20000ms infinite alternate;
+  column-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  margin: auto;
+  /* TODO fix the scrollbar displaying here somehow...  */
+  /* overflow-x: auto; */
+  /* overflow: hidden; */
+  position: relative;
+  row-gap: 20px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: 0;
+
+  @media (min-width: 923px) {
+    max-width: 768px;
+  }
+
+  .popular-card {
+    max-width: 240px;
+    background-color: #f6f6f6;
+    color: #1e293b;
+    padding-bottom: 10px;
+    a {
+      text-decoration: none;
+      line-height: 1.2em;
+      font-weight: 400;
+      color: #1e293b;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    img {
+      width: auto;
+      max-height: 240px;
+    }
+  }
+}
+
+.recently-added-container {
+  position: relative;
+  max-width: 798px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  &::before,
+  &::after {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+    content: "";
+    height: 700px;
+    position: absolute;
+    width: 200px;
+    z-index: 1;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes looping-forward-continuously {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-200px * 11 - 15px));
+  }
+}
+
+.third-carousel {
+  animation: looping-forward-continuously 20000ms infinite linear;
+  display: flex;
+  margin: auto;
+  position: relative;
+  gap: 20px;
+
+  @media (min-width: 923px) {
+    max-width: 768px;
+  }
+
+  .recently-added-card {
+    max-width: 350px;
+    background-color: #f6f6f6;
+    color: #1e293b;
+    padding-bottom: 10px;
+
+    a {
+      text-decoration: none;
+      line-height: 1.2em;
+      font-weight: 400;
+      color: #1e293b;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    img {
+      width: auto;
+      max-height: 350px;
+    }
+  }
+}
