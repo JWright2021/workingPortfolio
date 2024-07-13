@@ -27,7 +27,7 @@ function addSlides(_callback) {
       description:
         "An origami box with 5 sections. The diamond divider box is a box fitted with 4 gem shaped boxes and a square in the middle. No glue required.",
       imgSrc:
-        "https://jwright2021.github.io/workingPortfolio/images/origami-diamond-divider-box-tutorial-paper-kawaii-440x440.jpg",
+        "https://jwright2021.github.io/workingPortfolio/images/origami-diamond-divider-box-tutorial-paper-kawaii-05-440x440.jpg",
       slideLink: "https://www.linkedin.com/in/jenna-wright/",
     },
     {
