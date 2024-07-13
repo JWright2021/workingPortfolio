@@ -10,18 +10,17 @@ function addSlides(_callback) {
       description:
         "Learn how to make an 8 sided octagonal origami gift box with star lid. Both the lid and box are made with 1 sheet of paper, no glue required.",
       imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/06/origami-octagonal-box-tutorial-paper-kawaii-01-440x440.jpg",
+        "https://jwright2021.github.io/workingPortfolio/images/origami-octagonal-box-tutorial-paper-kawaii-01-440x440.jpg",
       slideLink:
         "https://www.paperkawaii.com/octagonal-origami-gift-box-tutorial/",
     },
     {
-      label: "Octagonal Origami Gift Box Tutorial",
+      label: "Origami Hexagonal Gift Box Tutorial",
       description:
-        "Learn how to make an 8 sided octagonal origami gift box with star lid. Both the lid and box are made with 1 sheet of paper, no glue required.",
+        "Learn how to make a 6 sided origami hexagonal gift box. Using 1 sheet of paper for each the box & lid, customise the top of the lid.",
       imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/06/origami-octagonal-box-tutorial-paper-kawaii-01-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/octagonal-origami-gift-box-tutorial/",
+        "https://jwright2021.github.io/workingPortfolio/images/origami-octagonal-box-tutorial-paper-kawaii-01-440x440.jpg",
+      slideLink: "https://www.linkedin.com/in/jenna-wright/",
     },
     {
       label: "Octagonal Origami Gift Box Tutorial",
