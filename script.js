@@ -19,44 +19,40 @@ function addSlides(_callback) {
       description:
         "Learn how to make a 6 sided origami hexagonal gift box. Using 1 sheet of paper for each the box & lid, customise the top of the lid.",
       imgSrc:
-        "https://jwright2021.github.io/workingPortfolio/images/origami-octagonal-box-tutorial-paper-kawaii-01-440x440.jpg",
+        "https://jwright2021.github.io/workingPortfolio/images/origami-hexagonal-box-tutorial-paper-kawaii-02-440x440.jpg",
       slideLink: "https://www.linkedin.com/in/jenna-wright/",
     },
     {
-      label: "Octagonal Origami Gift Box Tutorial",
+      label: "Origami Diamond Divider Box Tutorial – 5 Sections",
       description:
-        "Learn how to make an 8 sided octagonal origami gift box with star lid. Both the lid and box are made with 1 sheet of paper, no glue required.",
+        "An origami box with 5 sections. The diamond divider box is a box fitted with 4 gem shaped boxes and a square in the middle. No glue required.",
       imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/06/origami-octagonal-box-tutorial-paper-kawaii-01-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/octagonal-origami-gift-box-tutorial/",
+        "https://jwright2021.github.io/workingPortfolio/images/origami-diamond-divider-box-tutorial-paper-kawaii-440x440.jpg",
+      slideLink: "https://www.linkedin.com/in/jenna-wright/",
     },
     {
-      label: "Octagonal Origami Gift Box Tutorial",
+      label: "Mini Origami Pot Plants Tutorial – Make Cute Paper Houseplants",
       description:
-        "Learn how to make an 8 sided octagonal origami gift box with star lid. Both the lid and box are made with 1 sheet of paper, no glue required.",
+        "Learn how to make a mini origami pot plant with this step by step tutorial. Miniature origami houseplants make great desk decor & gifts.",
       imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/06/origami-octagonal-box-tutorial-paper-kawaii-01-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/octagonal-origami-gift-box-tutorial/",
+        "https://jwright2021.github.io/workingPortfolio/images/origami-houseplant-tutorial-paper-kawaii-01-440x440.jpg",
+      slideLink: "https://www.linkedin.com/in/jenna-wright/",
     },
     {
-      label: "Octagonal Origami Gift Box Tutorial",
+      label: "Origami Star Bowl Instructions",
       description:
-        "Learn how to make an 8 sided octagonal origami gift box with star lid. Both the lid and box are made with 1 sheet of paper, no glue required.",
+        "Learn how to make a simple origami star bowl or dish, use these to serve snacks at parties or hang them up as paper decorations.",
       imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/06/origami-octagonal-box-tutorial-paper-kawaii-01-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/octagonal-origami-gift-box-tutorial/",
+        "https://jwright2021.github.io/workingPortfolio/images/origami-star-bowl-tutorial-paper-kawaii-03-440x440.jpg",
+      slideLink: "https://www.linkedin.com/in/jenna-wright/",
     },
     {
-      label: "Octagonal Origami Gift Box Tutorial",
+      label: "Origami Hinged Box Video Tutorial",
       description:
-        "Learn how to make an 8 sided octagonal origami gift box with star lid. Both the lid and box are made with 1 sheet of paper, no glue required.",
+        "Learn how to make a modular origami hinged box with lids that open to the sides, this box would make a very neat wedding ring box.",
       imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/06/origami-octagonal-box-tutorial-paper-kawaii-01-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/octagonal-origami-gift-box-tutorial/",
+        "https://jwright2021.github.io/workingPortfolio/images/hinged-origami-gift-box-tutorial-paper-kawaii-01-440x440.jpg",
+      slideLink: "https://www.linkedin.com/in/jenna-wright/",
     },
   ];
 
