@@ -2,7 +2,9 @@ var localData;
 
 async function fetchData() {
   try {
-    const response = await fetch(`./origamis-data.json`);
+    const response = await fetch(
+      `https://jwright2021.github.io/workingPortfolio/origamis-data.json`
+    );
     const origamis = await response.json();
     localData = origamis;
   } catch (error) {

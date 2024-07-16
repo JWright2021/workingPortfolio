@@ -68,7 +68,7 @@ function addSlides(_callback) {
 function addPopular(_callback) {
   const currentDiv = document.getElementById("popularInjection");
 
-  for (let i = 0; i < 17; i++) {
+  for (let i = 0; i < 16; i++) {
     const e = localData[i];
     const newPopularCard = document.createElement("div");
     newPopularCard.setAttribute("class", "popular-card");
