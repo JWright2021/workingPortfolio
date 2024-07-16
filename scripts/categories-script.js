@@ -20,7 +20,7 @@ async function fetchData() {
 function addCategories(_callback) {
   const currentDiv = document.getElementById("categoryInjection");
 
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 9; i++) {
     const e = localData[i];
     const newCategory = document.createElement("div");
     newCategory.setAttribute("class", "category");

@@ -20,7 +20,7 @@ async function fetchData() {
 function addOption(_callback) {
   const currentDiv = document.getElementById("optionInjection");
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     const e = localData.bookOptions[i];
     const newOption = document.createElement("div");
     newOption.setAttribute("class", "option");
