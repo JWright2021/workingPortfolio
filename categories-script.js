@@ -1,225 +1,24 @@
+var localData;
+
+async function fetchData() {
+  try {
+    const response = await fetch(`./origamis-data.json`);
+    const origamis = await response.json();
+    localData = origamis.categories;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 /**
- * Adds slides to the first carousel
+ * Adds categories
  * @param {none} _callback
  */
 function addCategories(_callback) {
-  // Working with these data values
-  const categoryData = [
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-    {
-      label: "Advanced Origami",
-      imgSrc:
-        "https://www.paperkawaii.com/wp-content/uploads/2019/03/origami-pokeball-box-tutorial-paper-kawaii-04-440x440.jpg",
-      slideLink:
-        "https://www.paperkawaii.com/origami-by-difficulty/advanced-origami/",
-    },
-  ];
-
   const currentDiv = document.getElementById("categoryInjection");
 
-  categoryData.forEach((e) => {
+  for (let i = 0; i < 5; i++) {
+    const e = localData[i];
     const newCategory = document.createElement("div");
     newCategory.setAttribute("class", "category");
     const newImg = document.createElement("img");
@@ -236,7 +35,7 @@ function addCategories(_callback) {
     newCategory.appendChild(newLabel);
 
     currentDiv.parentNode.insertBefore(newCategory, currentDiv);
-  });
+  }
 
   currentDiv.remove();
 }
