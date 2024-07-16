@@ -5,6 +5,7 @@ async function fetchData() {
     const response = await fetch(
       `https://jwright2021.github.io/workingPortfolio/origamis-data.json`
     );
+    // const response = await fetch(`./origamis-data.json`);
     const origamis = await response.json();
     localData = origamis;
   } catch (error) {
@@ -20,7 +21,7 @@ function addOption(_callback) {
   const currentDiv = document.getElementById("optionInjection");
 
   for (let i = 0; i < 3; i++) {
-    const e = localData.book - options[i];
+    const e = localData.bookOptions[i];
     const newOption = document.createElement("div");
     newOption.setAttribute("class", "option");
     const newStyle = `--optionBackground: url(${e.imgSrc});`;
@@ -46,8 +47,6 @@ function addOption(_callback) {
     newLabel.appendChild(newInfo);
     newOption.appendChild(newShadow);
     newOption.appendChild(newLabel);
-
-    console.log("newOption is ", newOption);
 
     currentDiv.parentNode.insertBefore(newOption, currentDiv);
   }
@@ -88,7 +87,8 @@ function addDiagram(_callback) {
   currentDiv.remove();
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
+  await fetchData();
   addOption();
   addDiagram();
 });

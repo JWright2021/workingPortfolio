@@ -5,6 +5,7 @@ async function fetchData() {
     const response = await fetch(
       `https://jwright2021.github.io/workingPortfolio/origamis-data.json`
     );
+    // const response = await fetch(`./origamis-data.json`);
     const origamis = await response.json();
     localData = origamis.categories;
   } catch (error) {
@@ -19,7 +20,7 @@ async function fetchData() {
 function addCategories(_callback) {
   const currentDiv = document.getElementById("categoryInjection");
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 8; i++) {
     const e = localData[i];
     const newCategory = document.createElement("div");
     newCategory.setAttribute("class", "category");
@@ -42,6 +43,7 @@ function addCategories(_callback) {
   currentDiv.remove();
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
+  await fetchData();
   addCategories();
 });

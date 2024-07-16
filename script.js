@@ -9,6 +9,7 @@ async function fetchData() {
     const response = await fetch(
       `https://jwright2021.github.io/workingPortfolio/origamis-data.json`
     );
+    // const response = await fetch(`./origamis-data.json`);
     const origamis = await response.json();
     localData = origamis.origamis;
   } catch (error) {
@@ -68,7 +69,7 @@ function addSlides(_callback) {
 function addPopular(_callback) {
   const currentDiv = document.getElementById("popularInjection");
 
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < 18; i++) {
     const e = localData[i];
     const newPopularCard = document.createElement("div");
     newPopularCard.setAttribute("class", "popular-card");
