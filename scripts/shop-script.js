@@ -64,7 +64,7 @@ function addOption(_callback) {
 function addDiagram(_callback) {
   const currentDiv = document.getElementById("diagramsInjection");
 
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 9; i++) {
     const e = localData.diagrams[i];
     const newDiagram = document.createElement("div");
     newDiagram.setAttribute("class", "diagram");
