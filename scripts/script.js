@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   currentDiv.remove();
 });
+
 // Add Navbar Nav
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = [
