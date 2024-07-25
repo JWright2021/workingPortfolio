@@ -1,33 +1,14 @@
-// Establish local data
-var localData;
-
-/**
- * get data
- */
-async function fetchData() {
-  try {
-    const response = await fetch(
-      `https://jwright2021.github.io/workingPortfolio/origamis-data.json`
-    );
-    // const response = await fetch(`./origamis-data.json`);
-    const origamis = await response.json();
-    localData = origamis.origamis;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
 /**
  * Adds slides to the first carousel
  * @param {none} _callback
  */
 function addSlides(_callback) {
-  // Find injection point
+  const origamisData = baseData.origamis;
   const currentDiv = document.getElementById("sliderInjection");
 
-  // Loop through data
   for (let i = 0; i < 5; i++) {
-    const e = localData[i];
+    const e = origamisData[i];
+
     // Create slide
     const newSlide = document.createElement("div");
     newSlide.setAttribute("class", "slide");
@@ -40,7 +21,7 @@ function addSlides(_callback) {
     const hrefLink = newLabel.cloneNode(true);
     hrefLink.appendChild(newImg);
 
-    // Below creates slide description
+    // Create slide description
     const newSlideDescription = document.createElement("div");
     newSlideDescription.setAttribute("class", "slide-description");
     const newDescription = document.createElement("p");
@@ -54,11 +35,9 @@ function addSlides(_callback) {
     newSlide.appendChild(hrefLink);
     newSlide.appendChild(newSlideDescription);
 
-    // add the newly created slide and its content into the slider area
     currentDiv.parentNode.insertBefore(newSlide, currentDiv);
   }
 
-  // remove injection point
   currentDiv.remove();
 }
 
@@ -67,10 +46,13 @@ function addSlides(_callback) {
  * @param {none} _callback
  */
 function addPopular(_callback) {
+  const origamisData = baseData.origamis;
   const currentDiv = document.getElementById("popularInjection");
 
   for (let i = 0; i < 18; i++) {
-    const e = localData[i];
+    const e = origamisData[i];
+
+    // Create popular card
     const newPopularCard = document.createElement("div");
     newPopularCard.setAttribute("class", "popular-card");
     const newImg = document.createElement("img");
@@ -81,8 +63,9 @@ function addPopular(_callback) {
 
     const hrefLink = newLabel.cloneNode(true);
     hrefLink.appendChild(newImg);
-
     newLabel.innerText = e.label;
+
+    // Append it all
     newPopularCard.appendChild(hrefLink);
     newPopularCard.appendChild(newLabel);
 
@@ -97,10 +80,13 @@ function addPopular(_callback) {
  * @param {none} _callback
  */
 function addRecently(_callback) {
+  const origamisData = baseData.origamis;
   const currentDiv = document.getElementById("recentlyInjection");
 
   for (let i = 0; i < 8; i++) {
-    const e = localData[i];
+    const e = origamisData[i];
+
+    // Create new card
     const recentlyAddedCard = document.createElement("div");
     recentlyAddedCard.setAttribute("class", "recently-added-card");
     const newImg = document.createElement("img");
@@ -119,6 +105,7 @@ function addRecently(_callback) {
     newLabel.innerText = e.label;
     newDate.textContent = e.date;
 
+    // Append it all
     recentlyAddedCard.appendChild(hrefLink);
     recentlyAddedCard.appendChild(newLabel);
     recentlyAddedCard.appendChild(newDate);
@@ -130,52 +117,22 @@ function addRecently(_callback) {
   currentDiv.remove();
 }
 
-// first-carousel interaction
 document.addEventListener("DOMContentLoaded", async function () {
-  await fetchData();
+  await fetchBaseData();
   addPopular();
   addSlides();
   addRecently();
+
+  // first carousel
   const carousel = document.querySelector(".first-carousel");
   const slider = document.querySelector(".slider");
   const arrowButtons = document.querySelectorAll(".first-carousel-buttons");
   const firstSlide = document.querySelector(".slide");
   if (!firstSlide) return;
   const firstSlideWidth = firstSlide.offsetWidth;
+  let timeoutID;
 
-  let isDragging = false,
-    startX,
-    startScrollLeft,
-    timeoutID;
-
-  const dragStart = (e) => {
-    isDragging = true;
-    slider.classList.add("dragging");
-    startX = e.pageX;
-    startScrollLeft = carousel.scrollLeft;
-  };
-
-  const dragging = (e) => {
-    if (!isDragging) return;
-
-    const newScrollPositionLeft = startScrollLeft - (e.pageX - startX);
-
-    if (
-      newScrollPositionLeft <= 0 ||
-      newScrollPositionLeft >= slider.scrollWidth - slider.offsetWidth
-    ) {
-      isDragging = false;
-      return;
-    }
-
-    slider.scrollLeft = newScrollPositionLeft;
-  };
-
-  const dragStop = () => {
-    isDragging = false;
-    slider.classList.remove("dragging");
-  };
-
+  // first carousel auto rotate
   const autoPlay = () => {
     if (window.innerWidth < 300) return;
     const totalWidthAllCards = slider.scrollWidth;
@@ -183,13 +140,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     if (slider.scrollLeft >= maxScrollPositionLeft) return;
     timeoutID = setTimeout(() => (slider.scrollLeft += firstSlideWidth), 20);
   };
-
-  slider.addEventListener("mousedown", dragStart);
-  slider.addEventListener("mousemove", dragging);
-  document.addEventListener("mouseup", dragStop);
   carousel.addEventListener("mouseenter", () => clearTimeout(timeoutID));
   carousel.addEventListener("mouseleave", autoPlay);
 
+  // first carousel button interaction
   arrowButtons.forEach((e) => {
     e.addEventListener("click", () => {
       slider.scrollLeft += e.id === "left" ? -firstSlideWidth : firstSlideWidth;
@@ -197,27 +151,18 @@ document.addEventListener("DOMContentLoaded", async function () {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const openBtn = document.querySelector(".open-modal-btn");
-//   const modal = document.querySelector(".modal-overlay");
-//   const closeBtn = document.querySelector(".close-modal-btn");
+// Handle Modal
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.querySelector(".modal-overlay");
+  const closeBtn = document.querySelector(".close-modal-btn");
+  const modalId = document.getElementById("myModal");
 
-//   function openModal() {
-//     modal.classList.remove("hide");
-//   }
+  function closeModal(e, clickedOutside) {
+    if (clickedOutside) {
+      if (e.target.classList.contains("modal-overlay")) modalId.remove();
+    } else modalId.remove();
+  }
 
-//   function closeModal(e, clickedOutside) {
-//     if (clickedOutside) {
-//       if (e.target.classList.contains("modal-overlay"))
-//         modal.classList.add("hide");
-//     } else modal.classList.add("hide");
-//   }
-
-//   openBtn.addEventListener("click", openModal);
-//   modal.addEventListener("click", (e) => closeModal(e, true));
-//   closeBtn.addEventListener("click", closeModal);
-// });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   document.getElementById("clickMe").click();
-// });
+  modal.addEventListener("click", (e) => closeModal(e, true));
+  closeBtn.addEventListener("click", closeModal);
+});

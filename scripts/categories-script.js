@@ -1,27 +1,13 @@
-var localData;
-
-async function fetchData() {
-  try {
-    const response = await fetch(
-      `https://jwright2021.github.io/workingPortfolio/origamis-data.json`
-    );
-    // const response = await fetch(`./origamis-data.json`);
-    const origamis = await response.json();
-    localData = origamis.categories;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
 /**
  * Adds categories
  * @param {none} _callback
  */
 function addCategories(_callback) {
+  const categoriesData = baseData.categories;
   const currentDiv = document.getElementById("categoryInjection");
 
   for (let i = 0; i < 9; i++) {
-    const e = localData[i];
+    const e = categoriesData[i];
     const newCategory = document.createElement("div");
     newCategory.setAttribute("class", "category");
     const newImg = document.createElement("img");
@@ -44,6 +30,6 @@ function addCategories(_callback) {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-  await fetchData();
+  await fetchBaseData();
   addCategories();
 });

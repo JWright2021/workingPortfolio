@@ -1,27 +1,13 @@
-var localData;
-
-async function fetchData() {
-  try {
-    const response = await fetch(
-      `https://jwright2021.github.io/workingPortfolio/origamis-data.json`
-    );
-    // const response = await fetch(`./origamis-data.json`);
-    const origamis = await response.json();
-    localData = origamis;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
 /**
  * Adds options to the book carousel
  * @param {none} _callback
  */
 function addOption(_callback) {
+  const optionsData = baseData.bookOptions;
   const currentDiv = document.getElementById("optionInjection");
 
   for (let i = 0; i < 4; i++) {
-    const e = localData.bookOptions[i];
+    const e = optionsData[i];
     const newOption = document.createElement("div");
     newOption.setAttribute("class", "option");
     const newStyle = `--optionBackground: url(${e.imgSrc});`;
@@ -62,10 +48,11 @@ function addOption(_callback) {
  * @param {none} _callback
  */
 function addDiagram(_callback) {
+  const diagramData = baseData.diagrams;
   const currentDiv = document.getElementById("diagramsInjection");
 
   for (let i = 0; i < 9; i++) {
-    const e = localData.diagrams[i];
+    const e = diagramData[i];
     const newDiagram = document.createElement("div");
     newDiagram.setAttribute("class", "diagram");
     const newLabel = document.createElement("a");
@@ -88,7 +75,7 @@ function addDiagram(_callback) {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-  await fetchData();
+  await fetchBaseData();
   addOption();
   addDiagram();
 });
