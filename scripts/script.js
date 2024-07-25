@@ -103,6 +103,7 @@ function addPaperKawaiiLogo() {
 function addPageConstants(_callback) {
   const linksData = baseData.pageConstants;
   const currentDiv = document.getElementById("pageConstantsInjection");
+  if (!currentDiv) return;
 
   const visitPaperShop = document.createElement("div");
   visitPaperShop.setAttribute("class", "visit-paper-shop");
@@ -198,6 +199,7 @@ function addPageConstants(_callback) {
 function addFooterNav(_callback) {
   const footerLabels = baseData.footerNavigations;
   const currentDiv = document.getElementById("footerInjection");
+  if (!currentDiv) return;
   const footer = document.createElement("div");
   footer.setAttribute("class", "footer");
   const footerNav = document.createElement("div");

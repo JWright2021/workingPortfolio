@@ -6,6 +6,13 @@
   margin: auto;
   column-gap: 20px;
 
+  @media (max-width: 799px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .category {
     text-align: center;
     max-width: 225px;

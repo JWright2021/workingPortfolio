@@ -28,6 +28,9 @@ body {
   @media (min-width: 923px) {
     max-width: 768px;
   }
+  @media (max-width: 922px) {
+    padding: 0 20px;
+  }
 }
 
 .navbar {
@@ -265,8 +268,6 @@ p {
 }
 
 .sign-up-newsletter {
-  display: flex;
-  justify-content: space-between;
   padding-top: 20px;
 
   div {
@@ -280,7 +281,10 @@ p {
 
   .sign-up-form {
     text-align: left;
-    max-width: 800px;
+    max-width: 799px;
+    @media (min-width: 601px) {
+      padding-right: 30px;
+    }
   }
 
   .newsletter-input {
@@ -293,10 +297,37 @@ p {
   button {
     margin-top: 20px;
   }
+
+  @media (min-width: 601px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 600px) {
+    div {
+      display: grid;
+      justify-items: center;
+
+      p {
+        padding: 0 20px;
+        text-align: center;
+      }
+    }
+  }
 }
 
 .links-printables {
   padding-bottom: 40px;
+  @media (max-width: 799px) {
+    img {
+      max-width: 150px;
+    }
+  }
+  @media (max-width: 600px) {
+    div {
+      display: inline-grid;
+    }
+  }
 }
 
 .page-constants {
@@ -324,7 +355,7 @@ p {
     font-size: 17px;
 
     div {
-      padding: 20px;
+      padding: 10px 20px;
       border-radius: 10px;
     }
   }
@@ -342,11 +373,10 @@ p {
     padding-top: 10px;
   }
 
-  @media (max-width: 922px) {
+  @media (max-width: 799px) {
     .footer-nav {
       display: grid;
       div {
-        padding: 10px 0;
         justify-self: center;
       }
     }
