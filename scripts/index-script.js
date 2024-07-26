@@ -5,6 +5,7 @@
 function addSlides(_callback) {
   const origamisData = baseData.origamis;
   const currentDiv = document.getElementById("sliderInjection");
+  if (!currentDiv) return;
 
   for (let i = 0; i < 5; i++) {
     const e = origamisData[i];
@@ -48,6 +49,7 @@ function addSlides(_callback) {
 function addPopular(_callback) {
   const origamisData = baseData.origamis;
   const currentDiv = document.getElementById("popularInjection");
+  if (!currentDiv) return;
 
   for (let i = 0; i < 18; i++) {
     const e = origamisData[i];
@@ -82,6 +84,7 @@ function addPopular(_callback) {
 function addRecently(_callback) {
   const origamisData = baseData.origamis;
   const currentDiv = document.getElementById("recentlyInjection");
+  if (!currentDiv) return;
 
   for (let i = 0; i < 8; i++) {
     const e = origamisData[i];
@@ -154,6 +157,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 // Handle Modal
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.querySelector(".modal-overlay");
+  if (!modal) return;
   const closeBtn = document.querySelector(".close-modal-btn");
   const modalId = document.getElementById("myModal");
 

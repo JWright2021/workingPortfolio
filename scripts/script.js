@@ -232,3 +232,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   addPageConstants();
   addFooterNav();
 });
+
+// window.onresize = function () {
+//   var windowwidth = window.innerWidth;
+//   console.log(windowwidth);
+// };

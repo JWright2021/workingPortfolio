@@ -1,7 +1,7 @@
 .modal-overlay {
   background: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -10,48 +10,47 @@
   z-index: 3;
 
   .modal-wrapper {
-    width: 700px;
-    height: 300px;
+    height: fit-content;
+    padding-bottom: 20px;
+    padding-top: 20px;
     background: ghostwhite;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: 800px) {
+      width: 700px;
+    }
+    @media (max-width: 799px) {
+      width: 70vw;
+      height: fit-content;
+    }
   }
 
   .close-btn-wrapper {
-    display: flex;
+    display: grid;
+    .close-modal-btn {
+      padding: 8px;
+      background: slateblue;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 15px;
+      color: ghostwhite;
+      font-weight: 5px;
+      justify-self: center;
+      cursor: pointer;
+    }
   }
 
   .modal-content {
     margin: 20px auto;
-    max-width: 410px;
-    width: 100%;
+    max-width: 100%;
+    padding: 20px;
   }
   h1 {
     text-align: center;
+    @media (max-width: 320px) {
+      font-size: 22px;
+    }
   }
-}
-
-.open-modal-btn-wrapper {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.close-modal-btn,
-.open-modal-btn {
-  padding: 8px;
-  background: slateblue;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 15px;
-  color: ghostwhite;
-  font-weight: 5px;
-  margin-left: auto;
-  margin-top: 10px;
-  margin-right: 10px;
-  cursor: pointer;
 }
 
 .hide {
@@ -131,7 +130,7 @@
     grid-auto-columns: 100%;
   }
 
-  .dragging {
+  /* .dragging {
     scroll-snap-type: none;
     scroll-behavior: auto;
   }
@@ -139,7 +138,7 @@
   .draggin .card {
     cursor: grab;
     user-select: none;
-  }
+  } */
 
   .slide {
     scroll-snap-align: start;
@@ -368,6 +367,27 @@
     img {
       width: auto;
       max-height: 350px;
+    }
+
+    @media (max-width: 767px) {
+      max-width: 170px;
+      img {
+        max-width: 170px;
+      }
+
+      a {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      max-width: 160px;
+      img {
+        max-width: 160px;
+      }
+      h4 {
+        display: none;
+      }
     }
   }
 }
