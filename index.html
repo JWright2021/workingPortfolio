@@ -3,52 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="https://jwright2021.github.io/workingPortfolio/images/origami-cropped-favicon-1.png"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://jwright2021.github.io/workingPortfolio/styles/style.css"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://jwright2021.github.io/workingPortfolio/styles/index-style.css"
-    />
-    <script
-      src="https://jwright2021.github.io/workingPortfolio/scripts/script.js"
-      defer
-    ></script>
-    <script
-      src="https://jwright2021.github.io/workingPortfolio/scripts/index-script.js"
-      defer
-    ></script>
     <!-- Local development -->
-    <!-- <link type="text/css" rel="stylesheet" href="/styles/style.css" />
-    <link type="text/css" rel="stylesheet" href="/styles/index-style.css" />
-    <script src="/scripts/script.js" defer></script>
-    <script src="/scripts/index-script.js" defer></script> -->
-    <title>Paper Kawaii: Home</title>
+    <link rel="icon" href="images/myIcon.png" />
+    <link type="text/css" rel="stylesheet" href="/homepage.css" />
+    <script src="/homepage.js" defer></script>
+    <title>Jenna Wright</title>
   </head>
   <body>
-    <div class="navbar">
-      <div class="navbar-socials">
-        <div id="navbarSocialsInjection"></div>
-      </div>
-      <div class="navbar-nav">
-        <div id="navbarNavInjection"></div>
-      </div>
-      <div class="navbar-search">
-        <div id="navbarSearchInjection"></div>
-      </div>
+    <a id="top"></a>
+    <div class="navigation-links">
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo"
+        ><img src="/images/myIcon.png" alt="JennaWrightLogo"
+      /></label>
+      <ul>
+        <li><a class="active" href="#Career">Career</a></li>
+        <li><a href="#Portfolio">Portfolio</a></li>
+        <li><a href="#About">About</a></li>
+      </ul>
     </div>
-    <div id="logoInjection"></div>
     <div class="mobile-navbar">
       <div>
         <svg
-          fill="#ff7bac"
+          fill="#eeeeee"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -62,78 +42,79 @@
         Menu
       </div>
     </div>
-    <div class="modal-overlay in" id="myModal">
-      <div class="modal-wrapper">
-        <h1>Welcome to My Portfolio Sample</h1>
-        <div class="modal-content">
-          Hello, I've based this website off of Paper Kawaii because I like
-          origami. I'm open to work and am available for hire. Links here either
-          redirect to another of my pages or to my linked in or to Paper Kawaii
-          itself (which is a wonderful site to learn origamis). Happy viewing!
+    <div class="main">
+      <header>
+        <h1>Jenna Wright</h1>
+        <h2>Front End Developer</h2>
+        <p>&#128204; Coding since 2019 from PA, USA &#128204;</p>
+      </header>
+      <page>
+        <h3 id="Career">Career</h3>
+        <div class="career-resume">
+          <div id="careerInjection"></div>
         </div>
-        <div class="close-btn-wrapper">
-          <button class="close-modal-btn">Close</button>
+        <div class="career-resume">
+          <div class="career-card">
+            <div class="timeline">
+              <div class="date">2024 - PRESENT</div>
+              <div class="length">2.5 Years</div>
+            </div>
+            <div class="skills-card">
+              <div class="stackSkill">JavaScript</div>
+              <div class="stackSkill">Typescript</div>
+              <div class="stackSkill">Vue</div>
+              <div class="stackSkill">React</div>
+              <div class="stackSkill">Storybook</div>
+            </div>
+            <div class="job-card">
+              <div class="job-title">Software Engineer ♦ Lumen Learning</div>
+              <div class="job-description">
+                Primarily work as a FE developer implementing designs into code
+                for reusable functions and features in Vue and React. Work
+                closely with cross-function teams, developers, back end,
+                designers, product managers to implement new designs. Made new
+                greenfield product for use with internal CMS systems.
+              </div>
+            </div>
+          </div>
+          <div class="career-card">
+            <div class="timeline">
+              <div class="date">Jan 2021 - Jan 2022</div>
+              <div class="length">2 Years</div>
+            </div>
+            <div class="skills-card">
+              <div class="stackSkill">JavaScript</div>
+              <div class="stackSkill">Java</div>
+              <div class="stackSkill">AngularJS</div>
+              <div class="stackSkill">Cypress</div>
+              <div class="stackSkill">JUnit</div>
+            </div>
+            <div class="job-card">
+              <div class="job-title">Applications Engineer ♦ Vanguard</div>
+              <div class="job-description">
+                Primarily work as a Full Stack developer maintaining legacy
+                codes. Work closel with cross-function teams, developers, back
+                end, designers, product managers to implement new designs. Made
+                new greenfield product for use with internal CMS systems.
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="page-container">
-      <div class="page-width">
-        <h1>Origami & Paper Craft Tutorials</h1>
+        <a class="button-go-to-top" href="#top">Go to top</a>
+        <h3 id="Portfolio">My Portfolio</h3>
+        <a
+          href="https://jwright2021.github.io/workingPortfolio/paper-kawaii.html"
+          >Paper Kawaii Copy</a
+        >
         <p>
-          Here at Paper Kawaii you’ll find origami instructions, diagrams, photo
-          & video tutorials. Learn how to make cute origami boxes, envelopes,
-          flowers, books, bows, hearts, animals, stars, & more. ♥
+          I like origami and have followed this site for a lot of tutorials. I
+          figured it'd be fun to a sample site based on it.
         </p>
-        <div class="first-carousel">
-          <button
-            class="first-carousel-buttons"
-            id="left"
-            aria-label="previous"
-            role="button"
-          >
-            <svg width="20" fill="#ff7bac" height="20" viewBox="0 -38 256 512">
-              <path
-                d="m31.7 239 136-136a23.9 23.9 0 0 1 33.9 0l22.6 22.6a23.9 23.9 0 0 1 0 33.9L127.9 256l96.4 96.4a23.9 23.9 0 0 1 0 33.9L201.7 409a23.9 23.9 0 0 1-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"
-              />
-            </svg>
-          </button>
-          <div class="slider">
-            <div id="sliderInjection"></div>
-          </div>
-          <button
-            class="first-carousel-buttons"
-            id="right"
-            aria-label="next"
-            role="button"
-          >
-            <svg width="20" fill="#ff7bac" height="20" viewBox="0 -38 256 512">
-              <path
-                d="m224.3 273-136 136a23.9 23.9 0 0 1-33.9 0l-22.6-22.6a23.9 23.9 0 0 1 0-33.9l96.4-96.4-96.4-96.4a23.9 23.9 0 0 1 0-33.9L54.3 103a23.9 23.9 0 0 1 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
-              />
-            </svg>
-          </button>
-        </div>
-        <h1>Popular Origami Tutorials</h1>
-        <div class="popular-container">
-          <div class="second-carousel">
-            <div id="popularInjection"></div>
-          </div>
-        </div>
-        <h1>Recently Added @ Paper Kawaii:</h1>
-        <div class="recently-added-container">
-          <div class="third-carousel">
-            <div id="recentlyInjection"></div>
-          </div>
-        </div>
-      </div>
+        <a class="button-go-to-top" href="#top">Go to top</a>
+        <h3 id="About">About Me</h3>
+        <div id="aboutInjection"></div>
+        <a class="button-go-to-top" href="#top">Go to top</a>
+      </page>
     </div>
-    <div class="page-container">
-      <div class="page-width">
-        <div class="page-constants">
-          <div id="pageConstantsInjection"></div>
-        </div>
-      </div>
-    </div>
-    <div id="footerInjection"></div>
   </body>
 </html>

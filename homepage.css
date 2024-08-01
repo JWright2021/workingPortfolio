@@ -1,0 +1,212 @@
+@font-face {
+  font-family: "BarlowSemiCondensed";
+  src: url("https://jwright2021.github.io/workingPortfolio/fontFamily/BarlowSemiCondensed-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "BarlowSemiCondensedRegular";
+  src: url("https://jwright2021.github.io/workingPortfolio/fontFamily/BarlowSemiCondensed-Regular.ttf");
+}
+
+:root {
+  --acc-brown: #9c755f;
+  --acc-red: #e15759;
+  --acc-orange: #f28e2b;
+  --acc-yellow: #edc948;
+  --acc-green: #59a14f;
+  --acc-teal: #76b7b2;
+  --acc-blue: #4e79a7;
+  --acc-violet: #b07aa1;
+  --acc-pink: #ff9da7;
+  --acc-grey: #bab0ac;
+  --text-color: #f6faff;
+}
+
+body {
+  margin: 0px;
+  font-family: "BarlowSemiCondensedRegular", sans-serif;
+  background-color: var(--acc-teal);
+  color: var(--text-color);
+  display: grid;
+}
+
+.main {
+  padding: 0 20px 20px 20px;
+  text-align: center;
+  max-width: 768px;
+  place-self: center;
+  display: grid;
+  header {
+    h1,
+    h2 {
+      margin: 0.1em;
+    }
+    h1 {
+      font-size: 46px;
+      margin-top: 20px;
+      margin-bottom: 0.1em;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    p {
+      font-style: italic;
+      font-size: 20px;
+      margin: 0.1em;
+    }
+  }
+}
+
+page {
+  display: grid;
+  padding: 0;
+  h3 {
+    font-size: 24px;
+  }
+  font-size: 20px;
+}
+
+.navigation-links {
+  background-color: var(--acc-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 20px;
+
+  @media (max-width: 768px) {
+    display: none;
+    visibility: hidden;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+
+  ul li {
+    margin-right: 20px;
+  }
+
+  ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  ul li a:hover {
+    color: var(--acc-orange);
+  }
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: var(--text-color);
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+    order: 1;
+    margin-right: 20px;
+  }
+
+  ul {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    background-color: var(--acc-blue);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+
+  ul li {
+    margin: 20px 0;
+  }
+
+  ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+  }
+}
+
+.mobile-navbar {
+  display: none;
+  visibility: hidden;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--acc-blue);
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    display: block;
+    visibility: visible;
+    svg {
+      align-self: flex-end;
+    }
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.aboutMeDiv {
+  padding: 20px;
+}
+.button-go-to-top {
+  padding: 10px;
+  background-color: var(--acc-blue);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  max-width: 150px;
+  place-self: center;
+}
+
+.career-resume {
+  /* background-color: red; */
+
+  .career-card {
+    /* background-color: blue; */
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+  .timeline {
+    /* background-color: green; */
+    width: 30%;
+    text-align: right;
+  }
+  .skills-card {
+    text-align: left;
+  }
+  .job-card {
+    height: auto;
+    width: 70%;
+    text-align: left;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "pageRefs": ["meow", "woof"],
+  "socials": ["linkedin", "github", "email"],
+  "career": [
+    {
+      "dates": "Jan. 2022 - Jun. 2024",
+      "time": "2.5 years",
+      "title": "Front End Developer",
+      "company": "Lumen Learning",
+      "tools": ["HTML", "Vue", "CSS", "Typescript", "React", "Wordpress"],
+      "description": "Primarily work as a FE developer implementing designs into code for reusable functions and features in Vue and React. Work closely with cross-function teams, developers, back end, designers, product managers to implement new designs. Made new greenfield product for use with internal CMS systems."
+    },
+    {
+      "dates": "Dec. 2020 - Jan. 2022",
+      "time": "2.5 years",
+      "title": "Full Stack Engineer",
+      "company": "Vanguard",
+      "tools": ["JavaScript", "Java", "AngularJS", "Cypress", "JUnit"],
+      "description": "Primarily work as a Full Stack developer maintaining legacy codes. Work closel with cross-function teams, developers, back end, designers, product managers to implement new designs. Made new greenfield product for use with internal CMS systems. JavaScript; Java; AngularJS; Cypress; JUnit"
+    }
+  ],
+  "aboutMe": [
+    "I'm a Front End Developer that loves to bring designs to life. I've been in the industry since 2019. I'm open and available to hire.",
+    "Form follows function - Louis Sullivan, an American architect",
+    "This quote encapsulate my approach to implementation. There are countless different ways to code designs on the Front End, so how do we go about it in an efficient way that is functional and pleasing to the user?",
+    "Coding is a form of art where the tools are constantly changing and new mediums are created every day. - a quote by me, maybe, I'm not sure, I've lived on the internet for so long I don't know what's original anymore... ☺"
+  ]
+}
