@@ -83,16 +83,36 @@ page {
     display: flex;
     list-style: none;
     padding: 0;
+
+    @media (max-width: 768px) {
+      position: fixed;
+      top: 80px;
+      right: -100%;
+      background-color: var(--acc-blue);
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+    }
   }
 
   ul li {
     margin-right: 20px;
+    @media (max-width: 768px) {
+      margin: 20px 0;
+    }
   }
 
   ul li a {
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 
   ul li a:hover {
@@ -110,42 +130,19 @@ page {
   color: var(--text-color);
   cursor: pointer;
   display: none;
+  @media (max-width: 768px) {
+    display: block;
+    order: 1;
+    margin-right: 20px;
+  }
 }
 
 #check {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .checkbtn {
-    display: block;
-    order: 1;
-    margin-right: 20px;
-  }
-
-  ul {
-    position: fixed;
-    top: 80px;
-    right: -100%;
-    background-color: var(--acc-blue);
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
-  }
-
-  ul li {
-    margin: 20px 0;
-  }
-
-  ul li a {
-    font-size: 20px;
-  }
-
-  #check:checked ~ ul {
+#check:checked ~ ul {
+  @media (max-width: 768px) {
     right: 0;
   }
 }
@@ -175,6 +172,7 @@ page {
 .aboutMeDiv {
   padding: 20px;
 }
+
 .button-go-to-top {
   padding: 10px;
   background-color: var(--acc-blue);
@@ -186,18 +184,12 @@ page {
 }
 
 .career-resume {
-  /* background-color: red; */
-
   .career-card {
-    /* background-color: blue; */
-
-    display: flex;
     justify-content: space-between;
     gap: 30px;
     padding-bottom: 30px;
   }
   .timeline {
-    /* background-color: green; */
     width: 30%;
     text-align: right;
   }
@@ -208,5 +200,8 @@ page {
     height: auto;
     width: 70%;
     text-align: left;
+  }
+  @media (max-width: 769px) {
+    display: flex;
   }
 }
