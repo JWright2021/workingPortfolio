@@ -185,6 +185,7 @@ page {
 
 .career-resume {
   .career-card {
+    display: flex;
     justify-content: space-between;
     gap: 30px;
     padding-bottom: 30px;
@@ -202,6 +203,6 @@ page {
     text-align: left;
   }
   @media (max-width: 769px) {
-    display: flex;
+    /* display: flex; */
   }
 }
