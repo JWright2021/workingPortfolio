@@ -30,6 +30,9 @@ function addNavbarSocials(_callback) {
     svgHold.setAttribute("xmlns", "http://www.w3.org/2000/svg");
     svgHold.setAttribute("viewBox", e.viewBox);
     svgHold.setAttribute("fill", e.fill);
+    if (e.width) {
+      svgHold.style.width = e.width;
+    }
 
     var pathHold = document.createElementNS(
       "http://www.w3.org/2000/svg",
