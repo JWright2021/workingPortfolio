@@ -36,12 +36,10 @@ function addAboutMe(_callback) {
 
   const aboutDiv = document.createElement("div");
   aboutDiv.className = "aboutMeDiv";
-  for (const e of aboutMeData) {
-    aboutDiv.innerText += e + " ";
-  }
-  currentDiv.parentNode.insertBefore(aboutDiv, currentDiv);
 
-  currentDiv.remove();
+  aboutDiv.innerText = aboutMeData.join(" ");
+
+  currentDiv.parentNode.replaceChild(aboutDiv, currentDiv);
 }
 
 document.addEventListener("DOMContentLoaded", async function () {

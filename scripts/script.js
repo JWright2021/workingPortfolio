@@ -18,51 +18,60 @@ async function fetchBaseData() {
 function addNavbarSocials(_callback) {
   const socialData = baseData.socialMedias;
   const currentDiv = document.getElementById("navbarSocialsInjection");
-  for (i in socialData) {
-    const e = socialData[i];
+  if (!currentDiv) return;
 
+  const fragment = document.createDocumentFragment();
+
+  for (const e of socialData) {
     const socialHold = document.createElement("a");
     socialHold.setAttribute("href", e.hreflink);
     socialHold.setAttribute("aria-label", e.ariaLabel);
     socialHold.setAttribute("target", "_blank");
-    const spanHold = document.createElement("span");
-    const svgHold = document.createElement("svg");
+
+    const svgHold = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "svg"
+    );
     svgHold.setAttribute("xmlns", "http://www.w3.org/2000/svg");
     svgHold.setAttribute("viewBox", e.viewBox);
     svgHold.setAttribute("fill", e.fill);
     if (e.width) {
-      svgHold.style.width = e.width;
+      svgHold.setAttribute("width", e.width);
     }
 
-    var pathHold = document.createElementNS(
+    const pathHold = document.createElementNS(
       "http://www.w3.org/2000/svg",
       "path"
     );
     pathHold.setAttribute("d", e.svgPath);
 
     svgHold.appendChild(pathHold);
-    spanHold.innerHTML = svgHold.outerHTML;
-    socialHold.appendChild(spanHold);
+    socialHold.appendChild(svgHold);
 
-    currentDiv.parentNode.insertBefore(socialHold, currentDiv);
+    fragment.appendChild(socialHold);
   }
-  currentDiv.remove();
+
+  currentDiv.parentNode.replaceChild(fragment, currentDiv);
 }
 
 // Add Navbar Nav
 function addNavbarNav(_callback) {
   const navLinks = baseData.navigationLinks;
   const currentDiv = document.getElementById("navbarNavInjection");
-  for (i in navLinks) {
-    const e = navLinks[i];
+  if (!currentDiv) return;
+
+  const fragment = document.createDocumentFragment();
+
+  for (const e of navLinks) {
     const navDiv = document.createElement("div");
     const label = document.createElement("a");
     label.innerText = e.label;
     label.setAttribute("href", e.hrefLink);
     navDiv.appendChild(label);
-    currentDiv.parentNode.insertBefore(navDiv, currentDiv);
+    fragment.appendChild(navDiv);
   }
-  currentDiv.remove();
+
+  currentDiv.parentNode.replaceChild(fragment, currentDiv);
 }
 
 // Add Navbar Search
