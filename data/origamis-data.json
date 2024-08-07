@@ -431,19 +431,19 @@
   "navigationLinks": [
     {
       "label": "Home",
-      "hrefLink": "https://jwright2021.github.io/workingPortfolio/paper-kawaii.html"
+      "hrefLink": "https://jwright2021.github.io/workingPortfolio/pages/paper-kawaii.html"
     },
     {
       "label": "Categories",
-      "hrefLink": "https://jwright2021.github.io/workingPortfolio/categories.html"
+      "hrefLink": "https://jwright2021.github.io/workingPortfolio/pages/categories.html"
     },
     {
       "label": "Shop",
-      "hrefLink": "https://jwright2021.github.io/workingPortfolio/shop.html"
+      "hrefLink": "https://jwright2021.github.io/workingPortfolio/pages/shop.html"
     },
     {
       "label": "About",
-      "hrefLink": "https://jwright2021.github.io/workingPortfolio/about.html"
+      "hrefLink": "https://jwright2021.github.io/workingPortfolio/pages/about.html"
     }
   ],
   "pageConstants": [

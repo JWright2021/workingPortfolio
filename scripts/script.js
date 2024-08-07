@@ -4,9 +4,9 @@ var baseData;
 async function fetchBaseData() {
   try {
     const response = await fetch(
-      `https://jwright2021.github.io/workingPortfolio/origamis-data.json`
+      `https://jwright2021.github.io/workingPortfolio/data/origamis-data.json`
     );
-    // const response = await fetch(`./origamis-data.json`);
+    // const response = await fetch(`data/origamis-data.json`);
     const origamis = await response.json();
     baseData = origamis;
   } catch (error) {

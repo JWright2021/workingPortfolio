@@ -3,10 +3,10 @@ var baseData;
 // fetch all data
 async function fetchBaseData() {
   try {
-    // const response = await fetch(
-    //   `https://jwright2021.github.io/workingPortfolio/homepage-data.json`
-    // );
-    const response = await fetch(`./homepage-data.json`);
+    const response = await fetch(
+      `https://jwright2021.github.io/workingPortfolio/data/homepage-data.json`
+    );
+    // const response = await fetch(`data/homepage-data.json`);
     const homepage = await response.json();
     baseData = homepage;
   } catch (error) {
@@ -22,7 +22,7 @@ function addCareerDetails(_callback) {
   const careerDiv = document.createElement("div");
   careerDiv.className = "careerDiv";
   for (const e of careerData) {
-    console.log("career is", e);
+    // console.log("career is", e);
   }
   currentDiv.parentNode.insertBefore(careerDiv, currentDiv);
 
