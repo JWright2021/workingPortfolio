@@ -46,4 +46,16 @@ document.addEventListener("DOMContentLoaded", async function () {
   await fetchBaseData();
   addCareerDetails();
   addAboutMe();
+
+  document.querySelector(".menu-toggle").addEventListener("click", function () {
+    document.getElementById("nav-links").classList.toggle("active");
+  });
+});
+
+document.addEventListener("click", function (e) {
+  const target = e.target;
+  const navClass = document.getElementById("nav-links").classList;
+  if (target.classList.contains("headNav") && navClass.contains("active")) {
+    document.getElementById("nav-links").classList.remove("active");
+  }
 });

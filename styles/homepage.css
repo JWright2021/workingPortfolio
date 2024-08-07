@@ -74,45 +74,28 @@ page {
   padding: 10px 20px;
   font-size: 20px;
 
-  @media (max-width: 768px) {
+  .menu-toggle {
     display: none;
-    visibility: hidden;
   }
 
   ul {
     display: flex;
     list-style: none;
     padding: 0;
+  }
 
-    @media (max-width: 768px) {
-      position: fixed;
-      top: 80px;
-      right: -100%;
-      background-color: var(--acc-blue);
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.3s;
-    }
+  ul.active {
+    display: flex;
   }
 
   ul li {
     margin-right: 20px;
-    @media (max-width: 768px) {
-      margin: 20px 0;
-    }
   }
 
   ul li a {
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
-    @media (max-width: 768px) {
-      font-size: 20px;
-    }
   }
 
   ul li a:hover {
@@ -123,54 +106,6 @@ page {
 .logo img {
   width: 150px;
   height: auto;
-}
-
-.checkbtn {
-  font-size: 30px;
-  color: var(--text-color);
-  cursor: pointer;
-  display: none;
-  @media (max-width: 768px) {
-    display: block;
-    order: 1;
-    margin-right: 20px;
-  }
-}
-
-#check {
-  display: none;
-}
-
-#check:checked ~ ul {
-  @media (max-width: 768px) {
-    right: 0;
-  }
-}
-
-.mobile-navbar {
-  display: none;
-  visibility: hidden;
-  font-weight: 600;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--acc-blue);
-  padding: 20px;
-
-  @media (max-width: 768px) {
-    display: block;
-    visibility: visible;
-    svg {
-      align-self: flex-end;
-    }
-
-    :hover {
-      cursor: pointer;
-    }
-  }
-}
-
-.aboutMeDiv {
-  padding: 20px;
 }
 
 .button-go-to-top {
@@ -191,12 +126,7 @@ page {
 
 .career-card {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 20px;
-  grid-template-areas:
-    "column1"
-    "column2"
-    "column3";
   > div:nth-child(1) {
     grid-area: column1;
   }
@@ -206,8 +136,74 @@ page {
   > div:nth-child(3) {
     grid-area: column3;
   }
+  grid-template-columns: 175px 105px 1fr;
+  grid-template-areas: "column1 column2 column3";
+  > div:nth-child(1) {
+    text-align: right;
+  }
+  > div:nth-child(2) {
+    text-align: right;
+  }
+  > div:nth-child(3) {
+    text-align: left;
+  }
+}
 
-  @media (min-width: 320px) {
+.aboutMeDiv {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 100px;
+  }
+  .career-card {
+    grid-template-columns: 175px 1fr;
+    grid-template-areas:
+      "column1 column3"
+      "column2 column3";
+    text-align: left;
+  }
+}
+
+@media (max-width: 500px) {
+  .navigation-links {
+    flex-direction: column;
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: block;
+    }
+
+    ul {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+    }
+
+    ul li {
+      margin: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    label {
+      display: grid;
+    }
+  }
+  .logo img {
+    width: 75px;
+    display: grid;
+  }
+  .career-card {
     grid-template-columns: 175px 1fr;
     grid-template-areas:
       "column1 column2"
@@ -218,34 +214,15 @@ page {
     > div:nth-child(2) {
       text-align: left;
     }
-    text-align: left;
   }
+}
 
-  @media (min-width: 500px) {
-    grid-template-columns: 175px 1fr;
+@media (max-width: 320px) {
+  .career-card {
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "column1 column3"
-      "column2 column3";
-    > div:nth-child(1) {
-      text-align: right;
-    }
-    > div:nth-child(2) {
-      text-align: right;
-    }
-    text-align: left;
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: 175px 105px 1fr;
-    grid-template-areas: "column1 column2 column3";
-    > div:nth-child(1) {
-      text-align: right;
-    }
-    > div:nth-child(2) {
-      text-align: right;
-    }
-    > div:nth-child(3) {
-      text-align: left;
-    }
+      "column1"
+      "column2"
+      "column3";
   }
 }
