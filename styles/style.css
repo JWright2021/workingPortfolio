@@ -13,44 +13,36 @@ body {
   font-family: "BarlowSemiCondensedRegular", sans-serif;
   overflow-x: hidden;
 }
-
 .page-container {
   display: grid;
 }
-
 .page-width {
   justify-self: center;
   margin-top: 20px;
   text-align: center;
   word-wrap: break-word;
-
-  @media (min-width: 923px) {
-    max-width: 768px;
-  }
-  @media (max-width: 922px) {
-    padding: 0 20px;
-    max-width: 90vw;
-  }
 }
 
 .navbar {
   align-items: center;
   background-color: #eeeeee;
   display: flex;
-  gap: 10px;
-  justify-content: center;
-  padding: 17px;
-  width: 100%;
+  width: 100vw;
+  position: fixed;
+  top: 0;
 
-  @media (min-width: 923px) {
-    position: fixed;
-    top: 0;
-    z-index: 2;
-  }
-
-  @media (max-width: 922px) {
+  .menu-toggle {
     display: none;
     visibility: hidden;
+  }
+
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px;
+    width: 100%;
+    gap: 10px;
   }
 
   .navbar-socials svg {
@@ -69,15 +61,11 @@ body {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-
-    a {
-      color: #334155;
-      text-decoration: none;
-    }
   }
 
   .navbar-nav div a {
     padding: 0px 10px;
+    text-decoration: none;
     color: #334155;
     font-size: 20px;
     font-style: normal;
@@ -86,21 +74,15 @@ body {
 
   .navbar-nav div:hover {
     cursor: pointer;
-    color: #bcb3fb;
     fill: #bcb3fb;
+    a {
+      color: #bcb3fb;
+    }
   }
 
   .navbar-nav div svg {
     width: 10px;
     align-self: end;
-  }
-
-  .navbar-dropdown {
-    display: flex;
-  }
-
-  .dropdown-icon {
-    align-self: center;
   }
 
   .navbar-search {
@@ -118,37 +100,14 @@ body {
   }
 }
 
-.mobile-navbar {
-  display: none;
-  visibility: hidden;
-
-  @media (max-width: 922px) {
-    display: block;
-    visibility: visible;
-    color: #ff7bac;
-    display: flex;
-    font-weight: 600;
-    align-items: center;
-    justify-content: center;
-    background-color: #eeeeee;
-    padding: 20px;
-
-    svg {
-      align-self: flex-end;
-    }
-
-    :hover {
-      cursor: pointer;
-    }
-  }
-}
-
 .paper-kawaii-logo {
   display: flex;
   align-items: center;
   gap: 20px;
   justify-content: center;
   padding: 20px 0px;
+  margin-top: 70px;
+  position: relative;
 
   img {
     width: auto;
@@ -162,10 +121,6 @@ body {
     font-size: 36px;
     font-weight: 600;
     line-height: 1.23em;
-  }
-
-  @media (min-width: 922px) {
-    margin-top: 60px;
   }
 }
 
@@ -187,42 +142,24 @@ h2 {
     color: #bcb3fb;
   }
 }
-
 h1 {
   border-bottom: 3px solid #bcb3fb;
   font-size: 38px;
-  @media (max-width: 320px) {
-    font-size: 22px;
-  }
 }
-
 h2 {
   border-bottom: 2px solid #bcb3fb;
   font-size: 32px;
-  @media (max-width: 320px) {
-    font-size: 18px;
-  }
 }
-
 a {
   text-decoration: none;
-  /* line-height: 1.2em; */
   font-weight: 600;
   color: #1e293b;
   font-size: 23px;
   cursor: pointer;
-
-  @media (max-width: 320px) {
-    font-size: 16px;
-  }
 }
-
 p {
   margin: 1em 0;
   font-size: 20px;
-  @media (max-width: 320px) {
-    font-size: 14px;
-  }
 }
 
 .origami-buttons {
@@ -234,7 +171,6 @@ p {
   font-size: 20px;
   padding: 10px 20px;
 }
-
 .origami-buttons:hover {
   background-color: #bcb3fb;
   border-color: #bcb3fb;
@@ -250,11 +186,9 @@ p {
     color: #bcb3fb;
   }
 }
-
 .visit-paper-shop {
   padding: 20px;
 }
-
 .misc-links {
   display: flex;
   align-content: center;
@@ -282,9 +216,6 @@ p {
   .sign-up-form {
     text-align: left;
     max-width: 799px;
-    @media (min-width: 601px) {
-      padding-right: 30px;
-    }
   }
 
   .newsletter-input {
@@ -297,37 +228,9 @@ p {
   button {
     margin-top: 20px;
   }
-
-  @media (min-width: 601px) {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  @media (max-width: 600px) {
-    div {
-      display: grid;
-      justify-items: center;
-
-      p {
-        padding: 0 20px;
-        text-align: center;
-      }
-    }
-  }
 }
-
 .links-printables {
   padding-bottom: 40px;
-  @media (max-width: 799px) {
-    img {
-      max-width: 150px;
-    }
-  }
-  @media (max-width: 600px) {
-    div {
-      display: inline-grid;
-    }
-  }
 }
 
 .page-constants {
@@ -336,15 +239,15 @@ p {
   margin-top: 20px;
   text-align: center;
   word-wrap: break-word;
-
-  @media (min-width: 923px) {
-    max-width: 768px;
-  }
 }
 
 .footer {
   background-color: #bcb3fb;
   padding: 10px;
+  /* TODO Fix footer sizing */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* width: 100%; */
 
   .footer-nav {
     display: flex;
@@ -372,8 +275,43 @@ p {
     padding-bottom: 20px;
     padding-top: 10px;
   }
+}
 
-  @media (max-width: 799px) {
+@media (min-width: 923px) {
+  .page-width {
+    max-width: 768px;
+  }
+  .navbar {
+    z-index: 2;
+  }
+  .page-constants {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 922px) {
+  .page-width {
+    padding: 0 20px;
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 799px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar-links {
+    flex-direction: column;
+  }
+  .paper-kawaii-logo {
+    margin-top: 140px;
+  }
+  .links-printables {
+    img {
+      max-width: 150px;
+    }
+  }
+  .footer {
     .footer-nav {
       display: grid;
       div {
@@ -385,6 +323,116 @@ p {
       display: grid;
       padding-top: 10px;
       justify-items: center;
+    }
+  }
+}
+
+@media (min-width: 601px) {
+  .sign-up-form {
+    padding-right: 30px;
+  }
+  .sign-up-newsletter {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  .sign-up-newsletter {
+    div {
+      display: grid;
+      justify-items: center;
+
+      p {
+        padding: 0 20px;
+        text-align: center;
+      }
+    }
+  }
+  .links-printables {
+    div {
+      display: inline-grid;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: #ff7bac;
+      font-size: 1.5rem;
+      padding: 20px 0;
+      cursor: pointer;
+      display: block;
+      visibility: visible;
+    }
+    .navbar-links {
+      display: flex;
+    }
+    .navbar-links.hidden {
+      display: none;
+    }
+    .navbar-nav {
+      flex-direction: column;
+    }
+    .navbar-search {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  .paper-kawaii-logo {
+    margin-top: 80px;
+  }
+  .paper-kawaii-logo.shift-down {
+    margin-top: 280px;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  a {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .navbar-socials {
+    display: grid;
+    grid-template-columns: 5px 1fr auto 1fr 5px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      ". item1 item2 item3 ."
+      ". item4 . item5 .";
+    gap: 10px;
+    justify-content: center;
+    max-width: 100%;
+    a:nth-child(1) {
+      grid-area: item1;
+    }
+    a:nth-child(2) {
+      grid-area: item2;
+    }
+    a:nth-child(3) {
+      grid-area: item3;
+    }
+    a:nth-child(4) {
+      grid-area: item4;
+      position: relative;
+      z-index: 1;
+      left: 20px;
+    }
+    a:nth-child(5) {
+      grid-area: item5;
+      position: relative;
+      z-index: 1;
+      left: -20px;
     }
   }
 }

@@ -6,7 +6,7 @@ async function fetchBaseData() {
     const response = await fetch(
       `https://jwright2021.github.io/workingPortfolio/data/origamis-data.json`
     );
-    // const response = await fetch(`data/origamis-data.json`);
+    // const response = await fetch(`/../data/origamis-data.json`);
     const origamis = await response.json();
     baseData = origamis;
   } catch (error) {
@@ -109,6 +109,7 @@ function addPaperKawaiiLogo() {
   if (!currentDiv) return;
 
   const logoDiv = document.createElement("div");
+  logoDiv.setAttribute("id", "paper-kawaii-id");
   logoDiv.setAttribute("class", "paper-kawaii-logo");
   const logoImg = document.createElement("img");
   logoImg.setAttribute(
@@ -250,6 +251,23 @@ document.addEventListener("DOMContentLoaded", async function () {
   addPaperKawaiiLogo();
   addPageConstants();
   addFooterNav();
+});
+
+document.addEventListener("click", function (e) {
+  const target = e.target;
+  const navClass = document.getElementById("nav-links").classList;
+  const paperKawaiiAdj = document.getElementById("paper-kawaii-id").classList;
+
+  if (target.classList.contains("menu-toggle") && navClass.contains("hidden")) {
+    navClass.remove("hidden");
+    paperKawaiiAdj.add("shift-down");
+  } else if (
+    target.classList.contains("menu-toggle") &&
+    !navClass.contains("hidden")
+  ) {
+    navClass.add("hidden");
+    paperKawaiiAdj.remove("shift-down");
+  }
 });
 
 // window.onresize = function () {
