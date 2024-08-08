@@ -14,6 +14,7 @@ async function fetchBaseData() {
   }
 }
 
+// Add career details
 function addCareerDetails(_callback) {
   const careerData = baseData.career;
   const currentDiv = document.getElementById("careerInjection");
@@ -29,6 +30,7 @@ function addCareerDetails(_callback) {
   currentDiv.remove();
 }
 
+// Add about me details
 function addAboutMe(_callback) {
   const aboutMeData = baseData.aboutMe;
   const currentDiv = document.getElementById("aboutInjection");
@@ -47,15 +49,29 @@ document.addEventListener("DOMContentLoaded", async function () {
   addCareerDetails();
   addAboutMe();
 
-  document.querySelector(".menu-toggle").addEventListener("click", function () {
-    document.getElementById("nav-links").classList.toggle("active");
-  });
-});
+  // Cache the elements so as not to query the DOM unnecessarily
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.getElementById("nav-links");
 
-document.addEventListener("click", function (e) {
-  const target = e.target;
-  const navClass = document.getElementById("nav-links").classList;
-  if (target.classList.contains("headNav") && navClass.contains("active")) {
-    document.getElementById("nav-links").classList.remove("active");
-  }
+  menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+  });
+
+  document.addEventListener("click", function (e) {
+    // Close menu when a link is selected
+    if (
+      e.target.classList.contains("headNav") &&
+      navLinks.classList.contains("active")
+    ) {
+      navLinks.classList.remove("active");
+    }
+    // Close the menu when clicked outside of menu
+    if (
+      navLinks.classList.contains("active") &&
+      !navLinks.contains(e.target) &&
+      !menuToggle.contains(e.target)
+    ) {
+      navLinks.classList.remove("active");
+    }
+  });
 });

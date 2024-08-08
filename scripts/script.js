@@ -269,8 +269,3 @@ document.addEventListener("click", function (e) {
     paperKawaiiAdj.remove("shift-down");
   }
 });
-
-// window.onresize = function () {
-//   var windowwidth = window.innerWidth;
-//   console.log(windowwidth);
-// };

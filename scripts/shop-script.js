@@ -89,6 +89,7 @@ document.addEventListener("click", function (e) {
     let currentElement = target;
     let foundParent = null;
 
+    // iterate to find which book was selected
     while (currentElement) {
       if (
         currentElement.classList &&
