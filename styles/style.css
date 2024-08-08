@@ -30,6 +30,7 @@ body {
   width: 100vw;
   position: fixed;
   top: 0;
+  z-index: 3;
 
   .menu-toggle {
     display: none;
@@ -107,21 +108,19 @@ body {
   justify-content: center;
   padding: 20px 0px;
   margin-top: 70px;
-  position: relative;
-
-  img {
-    width: auto;
-    height: auto;
-    max-width: 100px;
-    max-height: 100px;
-  }
-
-  a {
-    color: #222;
-    font-size: 36px;
-    font-weight: 600;
-    line-height: 1.23em;
-  }
+  /* position: relative; */
+}
+.paper-kawaii-logo img {
+  width: auto;
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
+}
+.paper-kawaii-logo a {
+  color: #222;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.23em;
 }
 
 h1,
@@ -131,16 +130,17 @@ h2 {
   font-family: "BarlowSemiCondensed", sans-serif;
   font-weight: 600;
   line-height: normal;
-  /* TODO: make this not reliant on !important */
   margin: 10px auto !important;
   word-wrap: break-word;
-  a {
-    color: #ff7bac;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #bcb3fb;
-  }
+}
+h1 a,
+h2 a {
+  color: #ff7bac;
+  text-decoration: none;
+}
+h1 a:hover,
+h2 a:hover {
+  color: #bcb3fb;
 }
 h1 {
   border-bottom: 3px solid #bcb3fb;
@@ -177,62 +177,52 @@ p {
   cursor: pointer;
 }
 
-.from-the-author {
-  a {
-    font-weight: 600;
-    color: #ff7bac;
-  }
-  a:hover {
-    color: #bcb3fb;
-  }
+.from-the-author a {
+  font-weight: 600;
+  color: #ff7bac;
+}
+.from-the-author a:hover {
+  color: #bcb3fb;
 }
 .visit-paper-shop {
   padding: 20px;
 }
 .misc-links {
   display: flex;
-  align-content: center;
   justify-content: center;
   gap: 20px;
-  grid-template-columns: 3;
-  img {
-    max-width: 220px;
-    height: auto;
-  }
+}
+.misc-links img {
+  max-width: 220px;
+  height: auto;
 }
 
 .sign-up-newsletter {
   padding-top: 20px;
-
-  div {
-    width: 100%;
-  }
-
-  img {
-    max-width: 300px;
-    height: auto;
-  }
-
-  .sign-up-form {
-    text-align: left;
-    max-width: 799px;
-  }
-
-  .newsletter-input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 5px;
-    margin: 0 auto 0 0;
-  }
-
-  button {
-    margin-top: 20px;
-  }
+}
+.sign-up-newsletter div {
+  width: 100%;
+}
+.sign-up-newsletter img {
+  max-width: 300px;
+  height: auto;
+}
+.sign-up-newsletter .sign-up-form {
+  text-align: left;
+  max-width: 799px;
+}
+.sign-up-newsletter .newsletter-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 0 auto 0 0;
+}
+.sign-up-newsletter button {
+  margin-top: 20px;
 }
 .links-printables {
   padding-bottom: 40px;
 }
-
 .page-constants {
   display: grid;
   justify-self: center;
@@ -248,41 +238,34 @@ p {
   /* display: flex; */
   /* justify-content: center; */
   /* width: 100%; */
-
-  .footer-nav {
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    gap: 10px;
-    font-weight: 400;
-    font-size: 17px;
-
-    div {
-      padding: 10px 20px;
-      border-radius: 10px;
-    }
-  }
-
-  .footer-nav div:hover {
-    background-color: #ff7bac;
-    cursor: pointer;
-  }
-
-  .copyright {
-    display: grid;
-    justify-items: center;
-    color: #000;
-    padding-bottom: 20px;
-    padding-top: 10px;
-  }
+}
+.footer .footer-nav {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 17px;
+}
+.footer .footer-nav div {
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.footer .footer-nav div:hover {
+  background-color: #ff7bac;
+  cursor: pointer;
+}
+.footer .copyright {
+  display: grid;
+  justify-items: center;
+  color: #000;
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 @media (min-width: 923px) {
   .page-width {
     max-width: 768px;
-  }
-  .navbar {
-    z-index: 3;
   }
   .page-constants {
     max-width: 768px;
@@ -386,7 +369,7 @@ p {
     margin-top: 80px;
   }
   .paper-kawaii-logo.shift-down {
-    margin-top: 280px;
+    margin-top: 320px;
   }
 }
 

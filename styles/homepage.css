@@ -36,34 +36,32 @@ body {
   max-width: 768px;
   place-self: center;
   display: grid;
-  header {
-    h1,
-    h2 {
-      margin: 0.1em;
-    }
-    h1 {
-      font-size: 46px;
-      margin-top: 20px;
-      margin-bottom: 0.1em;
-    }
-    h2 {
-      font-size: 28px;
-    }
-    p {
-      font-style: italic;
-      font-size: 20px;
-      margin: 0.1em;
-    }
-  }
+}
+.main h1,
+.main h2 {
+  margin: 0.1em;
+}
+.main h1 {
+  font-size: 46px;
+  margin-top: 20px;
+  margin-bottom: 0.1em;
+}
+.main h2 {
+  font-size: 28px;
+}
+.main p {
+  font-style: italic;
+  font-size: 20px;
+  margin: 0.1em;
 }
 
 page {
   display: grid;
   padding: 0;
-  h3 {
-    font-size: 24px;
-  }
   font-size: 20px;
+}
+page h3 {
+  font-size: 24px;
 }
 
 .navigation-links {
@@ -73,34 +71,28 @@ page {
   align-items: center;
   padding: 10px 20px;
   font-size: 20px;
-
-  .menu-toggle {
-    display: none;
-  }
-
-  ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-  }
-
-  ul.active {
-    display: flex;
-  }
-
-  ul li {
-    margin-right: 20px;
-  }
-
-  ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  ul li a:hover {
-    color: var(--acc-orange);
-  }
+}
+.navigation-links .menu-toggle {
+  display: none;
+}
+.navigation-links ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.navigation-links ul.active {
+  display: flex;
+}
+.navigation-links ul li {
+  margin-right: 20px;
+}
+.navigation-links ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.navigation-links ul li a:hover {
+  color: var(--acc-orange);
 }
 
 .logo img {
@@ -127,26 +119,20 @@ page {
 .career-card {
   display: grid;
   gap: 20px;
-  > div:nth-child(1) {
-    grid-area: column1;
-  }
-  > div:nth-child(2) {
-    grid-area: column2;
-  }
-  > div:nth-child(3) {
-    grid-area: column3;
-  }
   grid-template-columns: 175px 105px 1fr;
   grid-template-areas: "column1 column2 column3";
-  > div:nth-child(1) {
-    text-align: right;
-  }
-  > div:nth-child(2) {
-    text-align: right;
-  }
-  > div:nth-child(3) {
-    text-align: left;
-  }
+}
+.career-card > div:nth-child(1) {
+  grid-area: column1;
+  text-align: right;
+}
+.career-card > div:nth-child(2) {
+  grid-area: column2;
+  text-align: right;
+}
+.career-card > div:nth-child(3) {
+  grid-area: column3;
+  text-align: left;
 }
 
 .aboutMeDiv {
@@ -169,51 +155,35 @@ page {
 @media (max-width: 500px) {
   .navigation-links {
     flex-direction: column;
-
-    .menu-toggle {
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1.5rem;
-      cursor: pointer;
-      display: block;
-    }
-
-    ul {
-      display: none;
-      width: 100%;
-      flex-direction: column;
-      padding: 0;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.3s;
-    }
-
-    ul li {
-      margin: 0;
-      width: 100%;
-      text-align: center;
-    }
-
-    label {
-      display: grid;
-    }
+  }
+  .navigation-links .menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+  }
+  .navigation-links ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  .navigation-links ul li {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .navigation-links label {
+    display: grid;
   }
   .logo img {
     width: 75px;
     display: grid;
-  }
-  .career-card {
-    grid-template-columns: 175px 1fr;
-    grid-template-areas:
-      "column1 column2"
-      "column3 column3";
-    > div:nth-child(1) {
-      text-align: left;
-    }
-    > div:nth-child(2) {
-      text-align: left;
-    }
   }
 }
 

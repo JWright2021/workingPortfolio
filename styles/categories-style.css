@@ -1,44 +1,46 @@
 .categories {
   display: grid;
-  position: relative;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 20px;
   margin: auto;
   column-gap: 20px;
-
-  @media (max-width: 799px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 500px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .category {
-    text-align: center;
-    max-width: 225px;
-    border: 3px solid #ff7bac;
-    border-radius: 15px;
-    overflow: hidden;
-
-    img {
-      height: auto;
-      max-width: 225px;
-      border-radius: 15px 15px 0 0;
-      transition: 0.5s all ease-in-out;
-    }
-    img:hover {
-      transform: scale(1.5);
-    }
-    a {
-      text-decoration: none;
-      line-height: 1.2em;
-      font-weight: 400;
-      color: #1e293b;
-      font-size: 20px;
-    }
-  }
+  justify-items: center;
+}
+.categories .category {
+  text-align: center;
+  max-width: 225px;
+  border: 3px solid #ff7bac;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.categories .category img {
+  height: auto;
+  max-width: 225px;
+  border-radius: 15px 15px 0 0;
+  transition: 0.5s all ease-in-out;
+}
+.categories .category img:hover {
+  transform: scale(1.5);
+}
+.categories .category a {
+  text-decoration: none;
+  line-height: 1.2em;
+  font-weight: 400;
+  color: #1e293b;
+  font-size: 20px;
 }
 
 .category:hover {
   border-color: #bcb3fb;
+}
+
+@media (max-width: 799px) {
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .categories {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

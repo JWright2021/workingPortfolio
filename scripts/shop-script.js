@@ -83,16 +83,33 @@ document.addEventListener("DOMContentLoaded", async function () {
 // Ebooks interaction
 document.addEventListener("click", function (e) {
   const target = e.target;
+  let container = target.closest(".ebooks-fancy-expand");
 
-  if (!target.classList.contains("option")) return;
+  if (container) {
+    let currentElement = target;
+    let foundParent = null;
 
-  if (target.classList.contains("active")) return;
-
-  const options = document.querySelectorAll(".option");
-
-  options.forEach((ev) => {
-    ev.classList.remove("active");
-  });
-
-  target.classList.add("active");
+    while (currentElement) {
+      if (
+        currentElement.classList &&
+        currentElement.classList.contains("option")
+      ) {
+        foundParent = currentElement;
+        break;
+      } else if (
+        currentElement.classList &&
+        currentElement.classList.contains("page-width")
+      ) {
+        break;
+      }
+      currentElement = currentElement.parentNode;
+    }
+    if (!currentElement.classList.contains("option")) return;
+    if (currentElement.classList.contains("active")) return;
+    const options = document.querySelectorAll(".option");
+    options.forEach((ev) => {
+      ev.classList.remove("active");
+    });
+    currentElement.classList.add("active");
+  }
 });
