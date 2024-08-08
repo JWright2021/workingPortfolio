@@ -282,7 +282,7 @@ p {
     max-width: 768px;
   }
   .navbar {
-    z-index: 2;
+    z-index: 3;
   }
   .page-constants {
     max-width: 768px;
