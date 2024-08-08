@@ -185,6 +185,18 @@ page h3 {
     width: 75px;
     display: grid;
   }
+  .career-card {
+    grid-template-columns: 175px 1fr;
+    grid-template-areas:
+      "column1 column2"
+      "column3 column3";
+    > div:nth-child(1) {
+      text-align: left;
+    }
+    > div:nth-child(2) {
+      text-align: left;
+    }
+  }
 }
 
 @media (max-width: 320px) {
