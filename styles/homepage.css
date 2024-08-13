@@ -129,6 +129,8 @@ page h3 {
   gap: 20px;
   grid-template-columns: 175px 105px 1fr;
   grid-template-areas: "column1 column2 column3";
+  padding-bottom: 15px;
+  border-bottom: 3px solid var(--text-color);
 }
 .career-card > div:nth-child(1) {
   grid-area: column1;
