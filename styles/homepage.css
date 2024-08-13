@@ -100,6 +100,7 @@ page h3 {
   height: auto;
 }
 
+.paper-kawaii-button,
 .button-go-to-top {
   padding: 10px;
   background-color: var(--acc-blue);
@@ -108,6 +109,12 @@ page h3 {
   border-radius: 5px;
   max-width: 150px;
   place-self: center;
+}
+
+.paper-kawaii-button {
+  background-color: var(--acc-pink);
+  color: var(--text-color);
+  margin-bottom: 20px;
 }
 
 .career-resume {
