@@ -20,14 +20,49 @@ function addCareerDetails(_callback) {
   const currentDiv = document.getElementById("careerInjection");
   if (!currentDiv) return;
 
-  const careerDiv = document.createElement("div");
-  careerDiv.className = "careerDiv";
-  for (const e of careerData) {
-    // console.log("career is", e);
-  }
-  currentDiv.parentNode.insertBefore(careerDiv, currentDiv);
+  const fragment = document.createDocumentFragment();
 
-  currentDiv.remove();
+  const careerResume = document.createElement("div");
+  careerResume.className = "career-resume";
+  for (const e of careerData) {
+    const careerCard = document.createElement("div");
+    careerCard.className = "career-card";
+
+    const timelineDiv = document.createElement("div");
+    timelineDiv.className = "timeline";
+    const dateDiv = document.createElement("div");
+    dateDiv.className = "date";
+    dateDiv.innerText = e.dates;
+    const lengthDiv = document.createElement("div");
+    lengthDiv.className = "length";
+    lengthDiv.innerText = e.time;
+    timelineDiv.append(dateDiv, lengthDiv);
+
+    const skillsCard = document.createElement("div");
+    skillsCard.className = "skills-card";
+    for (const skill of e.tools) {
+      console.log("skill is", skill);
+      const oneSkill = document.createElement("div");
+      oneSkill.className = "stackSkill";
+      oneSkill.innerText = skill;
+      skillsCard.appendChild(oneSkill);
+    }
+
+    const jobCard = document.createElement("div");
+    jobCard.className = "job-card";
+    const jobTitle = document.createElement("div");
+    jobTitle.className = "job-title";
+    jobTitle.innerText = `${e.title} ♦ ${e.company}`;
+    const jobDescription = document.createElement("div");
+    jobDescription.className = "job-description";
+    jobDescription.innerText = e.description;
+    jobCard.append(jobTitle, jobDescription);
+
+    careerCard.append(timelineDiv, skillsCard, jobCard);
+    careerResume.appendChild(careerCard);
+  }
+  fragment.appendChild(careerResume);
+  currentDiv.parentNode.replaceChild(fragment, currentDiv);
 }
 
 // Add about me details
