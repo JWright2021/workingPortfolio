@@ -3,20 +3,42 @@
   "socials": ["linkedin", "github", "email"],
   "career": [
     {
-      "dates": "Jan. 2022 - PRESENT",
+      "dates": "Jan. 2022 - Jun. 2024",
       "time": "2.5 years",
-      "title": "Front End Developer",
+      "title": "Software Engineer",
       "company": "Lumen Learning",
-      "tools": ["HTML", "Vue", "CSS", "Typescript", "React", "Wordpress"],
-      "description": "Primarily work as a FE developer implementing designs into code for reusable functions and features in Vue and React. Work closely with cross-function teams, developers, back end, designers, product managers to implement new designs. Made new greenfield product for use with internal CMS systems."
+      "tools": ["JavaScript", "Vue", "CSS", "Typescript", "React", "Storybook"],
+      "description": "Primarily worked on the Frontend implementing designs into code for reusable functions and features in Vue and React across multiple products. Worked closely with cross-function teams, developers, back end, designers, product managers to implement new designs. Made new greenfield product for use with internal CMS systems."
     },
     {
       "dates": "Dec. 2020 - Jan. 2022",
-      "time": "2.5 years",
-      "title": "Full Stack Engineer",
+      "time": "1.2 years",
+      "title": "Full Stack Developer",
       "company": "Vanguard",
-      "tools": ["JavaScript", "Java", "AngularJS", "Cypress", "JUnit"],
-      "description": "Primarily work as a Full Stack developer maintaining legacy codes. Work closel with cross-function teams, developers, back end, designers, product managers to implement new designs. Made new greenfield product for use with internal CMS systems. JavaScript; Java; AngularJS; Cypress; JUnit"
+      "tools": ["JavaScript", "Java", "AngularJS", "Cypress", "JUnit/Jest"],
+      "description": "Primarily worked as a Full Stack developer maintaining legacy codes. Followed the Agile/Lean methodology. Analyzed and identified areas for test automation by implementing stories."
+    },
+    {
+      "dates": "Feb. 2020 - Nov. 2020",
+      "time": "10 months",
+      "title": "Salesforce Developer",
+      "company": "Vanguard",
+      "tools": ["Salesforce", "MongoDB", "Express", "AngularJS", "NodeJS"],
+      "description": "Analyzed and identified areas for improvement to organization's Salesforce Security Model. Worked with internal international teams to determine and configure desired Salesforce interaction. During this time I mentored and advised an IT intern project team that used MEAN stack structure for an internal application development."
+    },
+    {
+      "dates": "Jul. 2019 - Feb. 2020",
+      "time": "8 months",
+      "title": "Technology Leadership Program",
+      "company": "Vanguard",
+      "tools": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Public Speaking",
+        "Project Planning"
+      ],
+      "description": "Leadership focused training in Technology. Highly focused technical development training in full stack development, web accessibility, and implemented a prototype internal application for company wide usage. Engaged in specialized training to develop business and leadership abilities including but not limited to: project presentation, business negotiations, public speaking, interpersonal skills, and project planning."
     }
   ],
   "aboutMe": [
