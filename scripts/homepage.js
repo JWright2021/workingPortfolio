@@ -41,7 +41,6 @@ function addCareerDetails(_callback) {
     const skillsCard = document.createElement("div");
     skillsCard.className = "skills-card";
     for (const skill of e.tools) {
-      console.log("skill is", skill);
       const oneSkill = document.createElement("div");
       oneSkill.className = "stackSkill";
       oneSkill.innerText = skill;
