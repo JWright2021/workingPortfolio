@@ -13,7 +13,7 @@
   --acc-red: #e15759;
   --acc-orange: #f28e2b;
   --acc-yellow: #edc948;
-  --acc-green: #59a14f;
+  --acc-green: #177d1e;
   --acc-teal: #407d7a;
   --acc-blue: #4e79a7;
   --acc-violet: #b07aa1;
@@ -113,7 +113,7 @@ page h3 {
 }
 
 .paper-kawaii-button {
-  background-color: var(--acc-pink);
+  background-color: var(--acc-green);
   color: var(--text-color);
   margin-bottom: 20px;
 }
