@@ -113,8 +113,6 @@ page h3 {
 }
 
 .paper-kawaii-button {
-  background-color: var(--acc-green);
-  color: var(--text-color);
   margin-bottom: 20px;
 }
 
