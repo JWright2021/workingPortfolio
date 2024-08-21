@@ -12,6 +12,7 @@ function addCategories(_callback) {
     newCategory.setAttribute("class", "category");
     const newImg = document.createElement("img");
     newImg.setAttribute("src", e.imgSrc);
+    newImg.setAttribute("alt", e.label);
     const newLabel = document.createElement("a");
     newLabel.setAttribute("href", e.slideLink);
     newLabel.setAttribute("target", "_blank");

@@ -8,6 +8,11 @@
   src: url("https://jwright2021.github.io/workingPortfolio/fontFamily/BarlowSemiCondensed-Regular.ttf");
 }
 
+:root {
+  --acc-purple: #6d429e;
+  --acc-dark-pink: #ad0042;
+}
+
 body {
   margin: 0px;
   font-family: "BarlowSemiCondensedRegular", sans-serif;
@@ -75,9 +80,9 @@ body {
 
   .navbar-nav div:hover {
     cursor: pointer;
-    fill: #bcb3fb;
+    fill: var(--acc-purple);
     a {
-      color: #bcb3fb;
+      color: var(--acc-purple);
     }
   }
 
@@ -92,11 +97,11 @@ body {
 
   .navbar-search div svg {
     width: 20px;
-    fill: #ff7bac;
+    fill: var(--acc-dark-pink);
 
     :hover {
       cursor: pointer;
-      fill: #bcb3fb;
+      fill: var(--acc-purple);
     }
   }
 }
@@ -116,7 +121,7 @@ body {
   max-width: 100px;
   max-height: 100px;
 }
-.paper-kawaii-logo a {
+.paper-kawaii-logo p {
   color: #222;
   font-size: 36px;
   font-weight: 600;
@@ -135,19 +140,19 @@ h2 {
 }
 h1 a,
 h2 a {
-  color: #ff7bac;
+  color: var(--acc-dark-pink);
   text-decoration: none;
 }
 h1 a:hover,
 h2 a:hover {
-  color: #bcb3fb;
+  color: var(--acc-purple);
 }
 h1 {
-  border-bottom: 3px solid #bcb3fb;
+  border-bottom: 3px solid var(--acc-purple);
   font-size: 38px;
 }
 h2 {
-  border-bottom: 2px solid #bcb3fb;
+  border-bottom: 2px solid var(--acc-purple);
   font-size: 32px;
 }
 a {
@@ -164,25 +169,25 @@ p {
 
 .origami-buttons {
   width: fit-content;
-  background-color: #ff7bac;
-  border: 2pt solid #ff7bac;
+  background-color: var(--acc-dark-pink);
+  border: 2pt solid var(--acc-dark-pink);
   border-radius: 10px;
   color: white;
   font-size: 20px;
   padding: 10px 20px;
 }
 .origami-buttons:hover {
-  background-color: #bcb3fb;
-  border-color: #bcb3fb;
+  background-color: var(--acc-purple);
+  border-color: var(--acc-purple);
   cursor: pointer;
 }
 
 .from-the-author a {
   font-weight: 600;
-  color: #ff7bac;
+  color: var(--acc-dark-pink);
 }
 .from-the-author a:hover {
-  color: #bcb3fb;
+  color: var(--acc-purple);
 }
 .visit-paper-shop {
   padding: 20px;
@@ -232,7 +237,7 @@ p {
 }
 
 .footer {
-  background-color: #bcb3fb;
+  background-color: var(--acc-purple);
   padding: 10px;
   /* TODO Fix footer sizing */
   /* display: flex; */
@@ -252,13 +257,13 @@ p {
   border-radius: 10px;
 }
 .footer .footer-nav div:hover {
-  background-color: #ff7bac;
+  background-color: var(--acc-dark-pink);
   cursor: pointer;
 }
 .footer .copyright {
   display: grid;
   justify-items: center;
-  color: #000;
+  color: #fff;
   padding-bottom: 20px;
   padding-top: 10px;
 }
@@ -344,7 +349,7 @@ p {
     .menu-toggle {
       background: none;
       border: none;
-      color: #ff7bac;
+      color: var(--acc-dark-pink);
       font-size: 1.5rem;
       padding: 20px 0;
       cursor: pointer;

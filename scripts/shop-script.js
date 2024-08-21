@@ -61,6 +61,7 @@ function addDiagram(_callback) {
 
     const newImg = document.createElement("img");
     newImg.setAttribute("src", e.imgSrc);
+    newImg.setAttribute("alt", e.label);
 
     const hrefLink = newLabel.cloneNode(true);
     hrefLink.appendChild(newImg);

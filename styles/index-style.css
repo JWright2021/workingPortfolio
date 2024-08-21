@@ -23,7 +23,7 @@
 }
 .modal-overlay .close-btn-wrapper .close-modal-btn {
   padding: 8px;
-  background: slateblue;
+  background: var(--acc-purple);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15px;
   color: ghostwhite;

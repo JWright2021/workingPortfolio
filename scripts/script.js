@@ -117,7 +117,7 @@ function addPaperKawaiiLogo() {
     "https://jwright2021.github.io/workingPortfolio/images/origami-cropped-favicon-1.png"
   );
   logoImg.setAttribute("alt", "Paper Kawaii Logo");
-  const logoLabel = document.createElement("a");
+  const logoLabel = document.createElement("p");
   logoLabel.innerText = "Paper Kawaii";
   logoDiv.appendChild(logoImg);
   logoDiv.appendChild(logoLabel);
@@ -154,6 +154,7 @@ function addPageConstants(_callback) {
   const imageSrc = document.createElement("img");
   imageSrc.src =
     "https://jwright2021.github.io/workingPortfolio/images/subscribe-pop2.png";
+  imageSrc.setAttribute("alt", "sign-up-image-design");
   imageDiv.appendChild(imageSrc);
 
   const signUpForm = document.createElement("div");
@@ -204,6 +205,7 @@ function addPageConstants(_callback) {
     holdLink.target = "_blank";
     const holdImage = document.createElement("img");
     holdImage.src = e.imgSrc;
+    holdImage.setAttribute("alt", e.altText);
     holdLink.appendChild(holdImage);
     miscLinks.appendChild(holdLink);
   });

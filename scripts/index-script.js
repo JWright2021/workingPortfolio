@@ -15,6 +15,7 @@ function addSlides(_callback) {
     newSlide.setAttribute("class", "slide");
     const newImg = document.createElement("img");
     newImg.setAttribute("src", e.imgSrc);
+    newImg.setAttribute("alt", e.label);
     const newLabel = document.createElement("a");
     newLabel.setAttribute("href", e.slideLink);
     newLabel.setAttribute("target", "_blank");
@@ -59,6 +60,7 @@ function addPopular(_callback) {
     newPopularCard.setAttribute("class", "popular-card");
     const newImg = document.createElement("img");
     newImg.setAttribute("src", e.imgSrc);
+    newImg.setAttribute("alt", e.label);
     const newLabel = document.createElement("a");
     newLabel.setAttribute("href", e.slideLink);
     newLabel.setAttribute("target", "_blank");
@@ -94,6 +96,7 @@ function addRecently(_callback) {
     recentlyAddedCard.setAttribute("class", "recently-added-card");
     const newImg = document.createElement("img");
     newImg.setAttribute("src", e.imgSrc);
+    newImg.setAttribute("alt", e.label);
     const newLabel = document.createElement("a");
     newLabel.setAttribute("href", e.slideLink);
     newLabel.setAttribute("target", "_blank");
