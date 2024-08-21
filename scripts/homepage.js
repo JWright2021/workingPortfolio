@@ -14,6 +14,86 @@ async function fetchBaseData() {
   }
 }
 
+// create/add page content
+function addPageContent(_callback) {
+  const baseInjection = document.getElementById("baseInjection");
+  if (!baseInjection) return;
+
+  const baseFragment = document.createDocumentFragment();
+  const mainBody = document.createElement("div");
+  mainBody.className = "main";
+
+  const otherHeader = document.createElement("header");
+  otherHeader.innerHTML = `
+    <h1>Jenna Wright</h1>
+    <h2>Software Engineer</h2>
+    <p>&#128204; Coding since 2019 from PA, USA &#128204;</p>
+  `;
+  mainBody.appendChild(otherHeader);
+
+  const basePage = document.createElement("page");
+
+  const careerHeader = document.createElement("h3");
+  careerHeader.id = "Career";
+  careerHeader.textContent = "Career";
+  basePage.appendChild(careerHeader);
+
+  const careerInjection = document.createElement("div");
+  careerInjection.id = "careerInjection";
+  basePage.appendChild(careerInjection);
+
+  const educationHeader = document.createElement("h3");
+  educationHeader.textContent = "Education";
+  basePage.appendChild(educationHeader);
+
+  const educationDetails = document.createElement("p");
+  educationDetails.textContent =
+    "Graduated May 2019 with a B.A. in Computer Science from Gettysburg College.";
+  basePage.appendChild(educationDetails);
+
+  const portfolioHeader = document.createElement("h3");
+  portfolioHeader.id = "Portfolio";
+  portfolioHeader.textContent = "Portfolio";
+  basePage.appendChild(portfolioHeader);
+
+  const portfolioLink = document.createElement("a");
+  portfolioLink.className = "paper-kawaii-button";
+  portfolioLink.href =
+    "https://jwright2021.github.io/workingPortfolio/pages/paper-kawaii.html";
+  portfolioLink.textContent = "Paper Kawaii Reproduction";
+  basePage.appendChild(portfolioLink);
+
+  const blobDescription = document.createElement("p");
+  blobDescription.innerText =
+    "This is a re-imagined take on Paper Kawaii. I like origami and have followed this site for a lot of tutorials; so I figured it'd be fun to make a sample interface based on it.";
+  basePage.appendChild(blobDescription);
+
+  const AboutMeHeader = document.createElement("h3");
+  AboutMeHeader.id = "About";
+  AboutMeHeader.textContent = "About Me";
+  basePage.appendChild(AboutMeHeader);
+
+  const aboutMeDetails = document.createElement("div");
+  aboutMeDetails.className = "aboutMeDiv";
+  aboutMeDetails.innerText = baseData.aboutMe.join(" ");
+  basePage.appendChild(aboutMeDetails);
+
+  const aboutInjectionDiv = document.createElement("div");
+  aboutInjectionDiv.id = "aboutInjection";
+  basePage.appendChild(aboutInjectionDiv);
+
+  const goToTopButton = document.createElement("a");
+  goToTopButton.className = "button-go-to-top";
+  goToTopButton.href = "#top";
+  goToTopButton.textContent = "Go to Top";
+  basePage.appendChild(goToTopButton);
+
+  mainBody.appendChild(basePage);
+  baseFragment.appendChild(mainBody);
+
+  baseInjection.parentNode.replaceChild(baseFragment, baseInjection);
+}
+
 // Add career details
 function addCareerDetails(_callback) {
   const careerData = baseData.career;
@@ -64,24 +144,10 @@ function addCareerDetails(_callback) {
   currentDiv.parentNode.replaceChild(fragment, currentDiv);
 }
 
-// Add about me details
-function addAboutMe(_callback) {
-  const aboutMeData = baseData.aboutMe;
-  const currentDiv = document.getElementById("aboutInjection");
-  if (!currentDiv) return;
-
-  const aboutDiv = document.createElement("div");
-  aboutDiv.className = "aboutMeDiv";
-
-  aboutDiv.innerText = aboutMeData.join(" ");
-
-  currentDiv.parentNode.replaceChild(aboutDiv, currentDiv);
-}
-
 document.addEventListener("DOMContentLoaded", async function () {
   await fetchBaseData();
+  addPageContent();
   addCareerDetails();
-  addAboutMe();
 
   // Cache the elements so as not to query the DOM unnecessarily
   const menuToggle = document.querySelector(".menu-toggle");
