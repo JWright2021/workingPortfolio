@@ -165,7 +165,7 @@ function addPageConstants(_callback) {
   printDescription.textContent =
     "Join Paper Kawaii's newsletter to receive post updates, giveaways, free printables & more.";
 
-  const createInput = (type, title, placeholder) => {
+  const createInput = (type, title, placeholder, ariaLabel) => {
     const inputDiv = document.createElement("div");
     inputDiv.className = "newsletter-input";
 
@@ -173,6 +173,7 @@ function addPageConstants(_callback) {
     input.type = type;
     input.title = title;
     input.placeholder = placeholder;
+    input.ariaLabel = ariaLabel;
 
     inputDiv.appendChild(input);
     return inputDiv;
@@ -180,8 +181,12 @@ function addPageConstants(_callback) {
 
   signUpForm.appendChild(freePrints);
   signUpForm.appendChild(printDescription);
-  signUpForm.appendChild(createInput("text", "First Name", "First Name"));
-  signUpForm.appendChild(createInput("text", "Email", "Your Email"));
+  signUpForm.appendChild(
+    createInput("text", "First Name", "First Name", "Enter first name")
+  );
+  signUpForm.appendChild(
+    createInput("text", "Email", "Your Email", "Enter email")
+  );
 
   const subscribeNewsletter = document.createElement("button");
   subscribeNewsletter.className = "origami-buttons";
