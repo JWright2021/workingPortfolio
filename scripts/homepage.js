@@ -22,6 +22,7 @@ function addPageContent(_callback) {
   const baseFragment = document.createDocumentFragment();
   const mainBody = document.createElement("div");
   mainBody.className = "main";
+  mainBody.role = "main";
 
   const otherHeader = document.createElement("header");
   otherHeader.innerHTML = `
@@ -29,7 +30,7 @@ function addPageContent(_callback) {
     <h2>Software Engineer</h2>
     <p>&#128204; Coding since 2019 from PA, USA &#128204;</p>
   `;
-  mainBody.appendChild(otherHeader);
+  baseFragment.appendChild(otherHeader);
 
   const basePage = document.createElement("page");
 
@@ -57,7 +58,7 @@ function addPageContent(_callback) {
   basePage.appendChild(portfolioHeader);
 
   const portfolioLink = document.createElement("a");
-  portfolioLink.className = "paper-kawaii-button";
+  portfolioLink.className = "homepage-button";
   portfolioLink.href =
     "https://jwright2021.github.io/workingPortfolio/pages/paper-kawaii.html";
   portfolioLink.textContent = "Paper Kawaii Reproduction";
@@ -83,7 +84,7 @@ function addPageContent(_callback) {
   basePage.appendChild(aboutInjectionDiv);
 
   const goToTopButton = document.createElement("a");
-  goToTopButton.className = "button-go-to-top";
+  goToTopButton.className = "homepage-button";
   goToTopButton.href = "#top";
   goToTopButton.textContent = "Go to Top";
   basePage.appendChild(goToTopButton);
