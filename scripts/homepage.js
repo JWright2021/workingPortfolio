@@ -28,7 +28,7 @@ function addPageContent(_callback) {
   otherHeader.innerHTML = `
     <h1>Jenna Wright</h1>
     <h2>Software Engineer</h2>
-    <p>&#128204; Coding since 2019 from PA, USA &#128204;</p>
+    <p>&#128204; Open and avaiable for hire &#128204;</p>
   `;
   baseFragment.appendChild(otherHeader);
 
