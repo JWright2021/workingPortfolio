@@ -64,6 +64,13 @@ function addPageContent(_callback) {
   portfolioLink.textContent = "Paper Kawaii Reproduction";
   basePage.appendChild(portfolioLink);
 
+  const demoLink = document.createElement("a");
+  demoLink.className = "demo-button";
+  demoLink.href =
+    "https://jwright2021.github.io/workingPortfolio/pages/demo.html";
+  demoLink.textContent = "Demo";
+  basePage.appendChild(demoLink);
+
   const blobDescription = document.createElement("p");
   blobDescription.innerText =
     "This is a re-imagined take on Paper Kawaii. I like origami and have followed this site for a lot of tutorials; so I figured it'd be fun to make a sample interface based on it.";
