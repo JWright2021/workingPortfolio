@@ -65,17 +65,17 @@ function addPageContent(_callback) {
   basePage.appendChild(portfolioLink);
 
   const demoLink = document.createElement("a");
-  demoLink.className = "demo-button";
+  demoLink.className = "homepage-button";
   demoLink.href =
     "https://jwright2021.github.io/workingPortfolio/pages/demo.html";
   demoLink.textContent = "Demo";
   basePage.appendChild(demoLink);
 
   const teamGeneratorLink = document.createElement("a");
-  teamGeneratorLink.className = "demo-button";
+  teamGeneratorLink.className = "homepage-button";
   teamGeneratorLink.href =
     "https://jwright2021.github.io/workingPortfolio/pages/team-generator.html";
-  teamGeneratorLink.textContent = "Demo";
+  teamGeneratorLink.textContent = "Team Generator";
   basePage.appendChild(teamGeneratorLink);
 
   const blobDescription = document.createElement("p");
