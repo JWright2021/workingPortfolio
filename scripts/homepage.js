@@ -52,37 +52,6 @@ function addPageContent(_callback) {
     "Graduated May 2019 with a B.A. in Computer Science from Gettysburg College.";
   basePage.appendChild(educationDetails);
 
-  const portfolioHeader = document.createElement("h3");
-  portfolioHeader.id = "Portfolio";
-  portfolioHeader.textContent = "Portfolio";
-  basePage.appendChild(portfolioHeader);
-
-  const portfolioLink = document.createElement("a");
-  portfolioLink.className = "homepage-button";
-  portfolioLink.href =
-    "https://jwright2021.github.io/workingPortfolio/pages/paper-kawaii.html";
-  portfolioLink.textContent = "Paper Kawaii Reproduction";
-  basePage.appendChild(portfolioLink);
-
-  const demoLink = document.createElement("a");
-  demoLink.className = "homepage-button";
-  demoLink.href =
-    "https://jwright2021.github.io/workingPortfolio/pages/demo.html";
-  demoLink.textContent = "Demo";
-  basePage.appendChild(demoLink);
-
-  const teamGeneratorLink = document.createElement("a");
-  teamGeneratorLink.className = "homepage-button";
-  teamGeneratorLink.href =
-    "https://jwright2021.github.io/workingPortfolio/pages/team-generator.html";
-  teamGeneratorLink.textContent = "Team Generator";
-  basePage.appendChild(teamGeneratorLink);
-
-  const blobDescription = document.createElement("p");
-  blobDescription.innerText =
-    "This is a re-imagined take on Paper Kawaii. I like origami and have followed this site for a lot of tutorials; so I figured it'd be fun to make a sample interface based on it.";
-  basePage.appendChild(blobDescription);
-
   const AboutMeHeader = document.createElement("h3");
   AboutMeHeader.id = "About";
   AboutMeHeader.textContent = "About Me";
