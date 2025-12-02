@@ -3,9 +3,11 @@ var baseData;
 // fetch all data
 async function fetchBaseData() {
   try {
+    // PRODUCTION ENV
     const response = await fetch(
-      `https://jwright2021.github.io/workingPortfolio/data/homepage-data.json`
+      `http://www.meetjennawright.com/data/homepage-data.json`
     );
+    // LOCAL ENV
     // const response = await fetch(`data/homepage-data.json`);
     const homepage = await response.json();
     baseData = homepage;

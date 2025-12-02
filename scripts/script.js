@@ -3,9 +3,11 @@ var baseData;
 // fetch all data
 async function fetchBaseData() {
   try {
+    // PROD ENV
     const response = await fetch(
       `https://jwright2021.github.io/workingPortfolio/data/origamis-data.json`
     );
+    // LOCAL ENV
     // const response = await fetch(`/../data/origamis-data.json`);
     const origamis = await response.json();
     baseData = origamis;
