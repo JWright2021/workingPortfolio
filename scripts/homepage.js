@@ -30,11 +30,17 @@ function addPageContent(_callback) {
   otherHeader.innerHTML = `
     <h1>Jenna Wright</h1>
     <h2>Software Engineer</h2>
-    <p>&#128204; Open and available for hire &#128204;</p>
+    <p>&#128204; Connect with me on LinkedIn &#128204;</p>
   `;
   baseFragment.appendChild(otherHeader);
 
   const basePage = document.createElement("page");
+
+  const linkedInConnect = document.createElement("a");
+  linkedInConnect.className = "homepage-button";
+  linkedInConnect.href = "https://www.linkedin.com/in/jenna-wright/";
+  linkedInConnect.textContent = "View my LinkedIn";
+  basePage.appendChild(linkedInConnect);
 
   const careerHeader = document.createElement("h3");
   careerHeader.id = "Career";

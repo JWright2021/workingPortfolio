@@ -3,32 +3,35 @@
   "socials": ["linkedin", "github", "email"],
   "career": [
     {
-      "dates": "Jan. 2022 - Jun. 2024",
-      "time": "2.5 years",
+      "dates": "2024 - 2025",
+      "title": "Frontend Engineer",
+      "company": "Eduplanet21",
+      "tools": ["Vue", "Vuetify", "CSS", "Typescript", "React", "Hubspot"],
+      "description": "Developed custom WYSIWYG configurations for all institutions across all levels, designed and implemented UI for reusable functions and features in Vue and using Vuetify. Managed client tickets and worked with customers directly to troubleshoot and resolve issues on Production levels."
+    },
+    {
+      "dates": "2022 - 2024",
       "title": "Software Engineer",
       "company": "Lumen Learning",
       "tools": ["JavaScript", "Vue", "CSS", "Typescript", "React", "Storybook"],
       "description": "Primarily worked on the Frontend implementing designs into code for reusable functions and features in Vue and React across multiple products. Worked closely with cross-function teams, developers, back end, designers, product managers to implement new designs. Made new greenfield product for use with internal CMS systems."
     },
     {
-      "dates": "Dec. 2020 - Jan. 2022",
-      "time": "1.2 years",
+      "dates": "2020 - 2022",
       "title": "Full Stack Developer",
       "company": "Vanguard",
       "tools": ["JavaScript", "Java", "AngularJS", "Cypress", "JUnit/Jest"],
       "description": "Primarily worked as a Full Stack developer maintaining legacy codes. Followed the Agile/Lean methodology. Analyzed and identified areas for test automation by implementing stories."
     },
     {
-      "dates": "Feb. 2020 - Nov. 2020",
-      "time": "10 months",
+      "dates": "2020 - 2020",
       "title": "Salesforce Developer",
       "company": "Vanguard",
       "tools": ["Salesforce", "MongoDB", "Express", "AngularJS", "NodeJS"],
       "description": "Analyzed and identified areas for improvement to organization's Salesforce Security Model. Worked with internal international teams to determine and configure desired Salesforce interaction. During this time I mentored and advised an IT intern project team that used MEAN stack structure for an internal application development."
     },
     {
-      "dates": "Jul. 2019 - Feb. 2020",
-      "time": "8 months",
+      "dates": "2019 - 2020",
       "title": "Technology Leadership Program",
       "company": "Vanguard",
       "tools": [
