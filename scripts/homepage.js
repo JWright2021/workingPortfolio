@@ -39,6 +39,7 @@ function addPageContent(_callback) {
   const linkedInConnect = document.createElement("a");
   linkedInConnect.className = "homepage-button";
   linkedInConnect.href = "https://www.linkedin.com/in/jenna-wright/";
+  linkedInConnect.target = "_blank";
   linkedInConnect.textContent = "View my LinkedIn";
   basePage.appendChild(linkedInConnect);
 
@@ -105,10 +106,8 @@ function addCareerDetails(_callback) {
     const dateDiv = document.createElement("div");
     dateDiv.className = "date";
     dateDiv.innerText = e.dates;
-    const lengthDiv = document.createElement("div");
-    lengthDiv.className = "length";
-    lengthDiv.innerText = e.time;
-    timelineDiv.append(dateDiv, lengthDiv);
+
+    timelineDiv.appendChild(dateDiv);
 
     const skillsCard = document.createElement("div");
     skillsCard.className = "skills-card";
