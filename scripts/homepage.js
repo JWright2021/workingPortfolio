@@ -5,7 +5,7 @@ async function fetchBaseData() {
   try {
     // PRODUCTION ENV
     const response = await fetch(
-      `http://www.meetjennawright.com/data/homepage-data.json`
+      `https://www.meetjennawright.com/data/homepage-data.json`
     );
     // LOCAL ENV
     // const response = await fetch(`data/homepage-data.json`);
