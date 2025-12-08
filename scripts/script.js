@@ -5,7 +5,7 @@ async function fetchBaseData() {
   try {
     // PROD ENV
     const response = await fetch(
-      `https://jwright2021.github.io/workingPortfolio/data/origamis-data.json`
+      `https://www.meetjennawright.com/data/origamis-data.json`
     );
     // LOCAL ENV
     // const response = await fetch(`/../data/origamis-data.json`);
@@ -116,7 +116,7 @@ function addPaperKawaiiLogo() {
   const logoImg = document.createElement("img");
   logoImg.setAttribute(
     "src",
-    "https://jwright2021.github.io/workingPortfolio/images/origami-cropped-favicon-1.png"
+    "https://www.meetjennawright.com/images/origami-cropped-favicon-1.png"
   );
   logoImg.setAttribute("alt", "Paper Kawaii Logo");
   const logoLabel = document.createElement("p");
@@ -154,8 +154,7 @@ function addPageConstants(_callback) {
 
   const imageDiv = document.createElement("div");
   const imageSrc = document.createElement("img");
-  imageSrc.src =
-    "https://jwright2021.github.io/workingPortfolio/images/subscribe-pop2.png";
+  imageSrc.src = "https://www.meetjennawright.com/images/subscribe-pop2.png";
   imageSrc.setAttribute("alt", "sign-up-image-design");
   imageDiv.appendChild(imageSrc);
 
