@@ -122,10 +122,25 @@ function addCareerDetails(_callback) {
     jobCard.className = "job-card";
     const jobTitle = document.createElement("div");
     jobTitle.className = "job-title";
-    jobTitle.innerText = `${e.title} ♦ ${e.company}`;
+    jobTitle.innerText = `${e.title} ♦ `;
+
+    const companyLink = document.createElement("a");
+    companyLink.href = e.companyLink;
+    companyLink.textContent = e.company;
+    companyLink.target = "_blank";
+    companyLink.rel = "noopener noreferrer";
+
+    jobTitle.appendChild(companyLink);
+
     const jobDescription = document.createElement("div");
-    jobDescription.className = "job-description";
-    jobDescription.innerText = e.description;
+    const descriptionTexts = document.createElement("ul");
+    for (const bulletPoint of e.description) {
+      const oneBulletpoint = document.createElement("li");
+      oneBulletpoint.className = "job-description";
+      oneBulletpoint.innerText = bulletPoint;
+      descriptionTexts.appendChild(oneBulletpoint);
+    }
+    jobDescription.appendChild(descriptionTexts);
     jobCard.append(jobTitle, jobDescription);
 
     careerCard.append(timelineDiv, skillsCard, jobCard);

@@ -6,42 +6,42 @@
       "dates": "2024 - 2025",
       "title": "Frontend Engineer",
       "company": "Eduplanet21",
+      "companyLink": "http://eduplanet21.com",
       "tools": ["Vue", "Vuetify", "CSS", "Typescript", "React", "Hubspot"],
-      "description": "Developed custom WYSIWYG configurations for all institutions across all levels, designed and implemented UI for reusable functions and features in Vue and using Vuetify. Managed client tickets and worked with customers directly to troubleshoot and resolve issues on Production levels."
+      "description": [
+        "Customized dynamic templates to integrate third-party WYSIWYG editors, fitting diverse institutional requirements across multiple client use cases, improved overall user experience using CMS and JSON for backend data structuring.",
+        "Provided client-facing technical support, resolving complex production-level issues and managing the ticketing/help desk system to ensure SLAs and customer satisfaction targets were consistently met.",
+        "Actively helped the business and sales team with technical product understandings to more accurately help users for individual use cases.",
+        "Developed reusable, configurable UI components using Vue, Vuetify, vite,  and javascript, enabling advanced filtering capabilities with a focus on modular design to ensure code maintainability across projects."
+      ]
     },
     {
       "dates": "2022 - 2024",
       "title": "Software Engineer",
       "company": "Lumen Learning",
+      "companyLink": "http://lumenlearning.com",
       "tools": ["JavaScript", "Vue", "CSS", "Typescript", "React", "Storybook"],
-      "description": "Primarily worked on the Frontend implementing designs into code for reusable functions and features in Vue and React across multiple products. Worked closely with cross-function teams, developers, back end, designers, product managers to implement new designs. Made new greenfield product for use with internal CMS systems."
+      "description": [
+        "Implemented sophisticated metric measurement tools using Vue and React, seamlessly integrating them with backend APIs powered by Rails and AWS, which enhanced student and faculty engagement by 20%, demonstrating a keen ability to drive meaningful user interaction and system effectiveness.",
+        "Revamped and designed a greenfield student assessment platform from the ground up using the Vue, Material UI, HTML, CSS and typescript, skillfully integrating it within iframes and handling state management and data with Pinia all backed by Git, Github, Jira, and CI/CD pipelines.",
+        "Proposed, developed, and delivered an internal tool during a hackathon, achieving a 70% reduction in debugging time and a 35% increase in team productivity, showcasing an ability to identify and address critical inefficiencies, driving substantial improvements in team productivity.",
+        "Played a key role in developing courseware that positively impacted 40,000 students' academic development, earning recognition from the Gates Foundation, highlighting commitment to creating solutions that drive significant educational outcomes and garner industry acknowledgment."
+      ]
     },
     {
-      "dates": "2020 - 2022",
+      "dates": "2019 - 2022",
       "title": "Full Stack Developer",
       "company": "Vanguard",
+      "companyLink": "http://vanguard.com",
       "tools": ["JavaScript", "Java", "AngularJS", "Cypress", "JUnit/Jest"],
-      "description": "Primarily worked as a Full Stack developer maintaining legacy codes. Followed the Agile/Lean methodology. Analyzed and identified areas for test automation by implementing stories."
-    },
-    {
-      "dates": "2020 - 2020",
-      "title": "Salesforce Developer",
-      "company": "Vanguard",
-      "tools": ["Salesforce", "MongoDB", "Express", "AngularJS", "NodeJS"],
-      "description": "Analyzed and identified areas for improvement to organization's Salesforce Security Model. Worked with internal international teams to determine and configure desired Salesforce interaction. During this time I mentored and advised an IT intern project team that used MEAN stack structure for an internal application development."
-    },
-    {
-      "dates": "2019 - 2020",
-      "title": "Technology Leadership Program",
-      "company": "Vanguard",
-      "tools": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Public Speaking",
-        "Project Planning"
-      ],
-      "description": "Leadership focused training in Technology. Highly focused technical development training in full stack development, web accessibility, and implemented a prototype internal application for company wide usage. Engaged in specialized training to develop business and leadership abilities including but not limited to: project presentation, business negotiations, public speaking, interpersonal skills, and project planning."
+      "description": [
+        "Played a crucial role in full-stack development using Agile/Lean methodologies with tools such as Webstorm, Jira, NodeJS, Angular and Cypress, collaborating closely with the team to drive successful project outcomes and robust test automation.",
+        "Identified and implemented innovative test automation strategies to enhance story execution, significantly improving testing efficiency and coverage.",
+        "Applied test-driven development principles to both team processes and feature implementation, ensuring high code quality and reliability.",
+        "Effectively communicated with team members and business stakeholders to design and deliver new features, ensuring alignment with strategic goals and user needs.",
+        "Engineered key features for web applications used by internal business users, optimizing functionality and supporting critical business operations.",
+        "Mentored two IT interns and provided strategic guidance to an intern project team developing an internal application using the MEAN stack, fostering their growth and successful project completion."
+      ]
     }
   ],
   "aboutMe": [
